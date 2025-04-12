@@ -24,7 +24,17 @@ namespace TPWinForm_Equipo_7B
 
         private void button1_Click(object sender, EventArgs e)
         {
+            CATALOGO VCATALOGO = new CATALOGO();
+            
+            VCATALOGO.ShowDialog();
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            BUSQUEDA vBUSQUEDA = new BUSQUEDA();
+
+            vBUSQUEDA.ShowDialog();
         }
     }
 }
