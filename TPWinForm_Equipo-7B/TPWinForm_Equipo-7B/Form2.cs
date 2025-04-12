@@ -16,5 +16,15 @@ namespace TPWinForm_Equipo_7B
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
