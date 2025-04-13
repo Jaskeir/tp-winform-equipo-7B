@@ -24,7 +24,7 @@ namespace TPWinForm_Equipo_7B
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CATALOGO VCATALOGO = new CATALOGO();
+            ARTICULO VCATALOGO = new ARTICULO();
             
             VCATALOGO.ShowDialog();
 
@@ -32,9 +32,14 @@ namespace TPWinForm_Equipo_7B
 
         private void button2_Click(object sender, EventArgs e)
         {
-            BUSQUEDA vBUSQUEDA = new BUSQUEDA();
+            G_MARCA VMARCAS = new G_MARCA();
 
-            vBUSQUEDA.ShowDialog();
+            VMARCAS.ShowDialog();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

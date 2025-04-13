@@ -10,23 +10,16 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo_7B
 {
-    public partial class ARTICULO : Form
+    public partial class G_MARCA : Form
     {
-        public ARTICULO()
+        public G_MARCA()
         {
             InitializeComponent();
         }
 
-        private void lista_articulos_SelectedIndexChanged(object sender, EventArgs e)
+        private void MARCAS_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            BUSQUEDA vBUSQUEDA = new BUSQUEDA();
-
-            vBUSQUEDA.ShowDialog();
         }
     }
 }
