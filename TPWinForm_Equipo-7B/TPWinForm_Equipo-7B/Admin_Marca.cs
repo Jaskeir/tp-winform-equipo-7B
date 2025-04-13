@@ -29,7 +29,7 @@ namespace TPWinForm_Equipo_7B
                 {
                     Marca aux = new Marca();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.Nombre= (string)datos.Lector["Nombre"];
+                    aux.Nombre= (string)datos.Lector["Descripcion"];
                    
                     lista.Add(aux);
                 }
