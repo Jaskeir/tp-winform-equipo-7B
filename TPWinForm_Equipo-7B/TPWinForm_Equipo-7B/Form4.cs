@@ -19,7 +19,22 @@ namespace TPWinForm_Equipo_7B
 
         private void MARCAS_Load(object sender, EventArgs e)
         {
+            Admin_Marca marca = new Admin_Marca();
+            try
+            {
+               dgvMarcas.DataSource = marca.Listar();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }
+
 }

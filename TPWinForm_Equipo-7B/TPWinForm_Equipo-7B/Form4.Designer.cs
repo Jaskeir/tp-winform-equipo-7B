@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.button2 = new System.Windows.Forms.Button();
             this.MODIFICARCATLOGO = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvMarcas
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(73, 83);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(654, 284);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMarcas.Location = new System.Drawing.Point(73, 83);
+            this.dgvMarcas.Name = "dgvMarcas";
+            this.dgvMarcas.RowHeadersWidth = 82;
+            this.dgvMarcas.RowTemplate.Height = 33;
+            this.dgvMarcas.Size = new System.Drawing.Size(654, 284);
+            this.dgvMarcas.TabIndex = 3;
+            this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // pictureBox1
             // 
@@ -60,7 +61,7 @@
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(293, 69);
             this.button2.TabIndex = 7;
-            this.button2.Text = "ELIMINARARTICULO";
+            this.button2.Text = "ELIMINAR MARCA";
             this.button2.UseVisualStyleBackColor = true;
             // 
             // MODIFICARCATLOGO
@@ -69,10 +70,10 @@
             this.MODIFICARCATLOGO.Name = "MODIFICARCATLOGO";
             this.MODIFICARCATLOGO.Size = new System.Drawing.Size(305, 69);
             this.MODIFICARCATLOGO.TabIndex = 6;
-            this.MODIFICARCATLOGO.Text = "NUEVO ARTICULO";
+            this.MODIFICARCATLOGO.Text = "NUEVA MARCA";
             this.MODIFICARCATLOGO.UseVisualStyleBackColor = true;
             // 
-            // MARCAS
+            // G_MARCA
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,11 +81,11 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.MODIFICARCATLOGO);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "MARCAS";
+            this.Controls.Add(this.dgvMarcas);
+            this.Name = "G_MARCA";
             this.Text = "GESTION DE MARCAS";
             this.Load += new System.EventHandler(this.MARCAS_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMarcas)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
@@ -92,7 +93,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMarcas;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button MODIFICARCATLOGO;
