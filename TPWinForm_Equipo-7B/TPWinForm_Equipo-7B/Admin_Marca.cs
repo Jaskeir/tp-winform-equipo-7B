@@ -46,5 +46,43 @@ namespace TPWinForm_Equipo_7B
                 
             }
         }
+
+        
+        public void agregar(Marca nuevo)
+        {
+            Admin_Datos datos = new Admin_Datos();
+
+            try
+            {
+                datos.setearConsulta("Insert into MARCAS (Descripcion)values('" + nuevo.Nombre + "')");
+                
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+        ///////////////////
+        public void eliminar(int id)
+        {
+            try
+            {
+                Admin_Datos datos = new Admin_Datos();
+                datos.setearConsulta("delete from MARCAS where id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        //////////////////////
     }
 }

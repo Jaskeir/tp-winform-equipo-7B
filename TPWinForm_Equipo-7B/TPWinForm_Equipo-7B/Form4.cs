@@ -35,6 +35,36 @@ namespace TPWinForm_Equipo_7B
         {
 
         }
+
+        private void MODIFICARCATLOGO_Click(object sender, EventArgs e)
+        {
+            NUEVA_MARCA nMARCA = new NUEVA_MARCA();
+
+            nMARCA.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            
+            {
+                Admin_Marca a_eliminar = new Admin_Marca();
+                Marca seleccionada;
+                try
+                {
+                    DialogResult respuesta = MessageBox.Show("¿Seguro que quiere eliminar la marca seleccionada?", "Eliminando", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    if (respuesta == DialogResult.Yes)
+                    {
+                        seleccionada = (Marca)dgvMarcas.CurrentRow.DataBoundItem;
+                        a_eliminar.eliminar(seleccionada.Id);
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
+            }
+            
+        }
     }
 
 }
