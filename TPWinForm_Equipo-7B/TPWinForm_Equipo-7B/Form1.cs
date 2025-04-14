@@ -24,8 +24,8 @@ namespace TPWinForm_Equipo_7B
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ARTICULO VCATALOGO = new ARTICULO();
-            
+            CATALOGO VCATALOGO = new CATALOGO();
+
             VCATALOGO.ShowDialog();
 
         }

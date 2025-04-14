@@ -26,5 +26,10 @@ namespace TPWinForm_Equipo_7B
         {
 
         }
+
+        private void CATALOGO_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

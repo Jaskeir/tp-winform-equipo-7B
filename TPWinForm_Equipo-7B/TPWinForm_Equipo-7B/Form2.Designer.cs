@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.btnEliminarArticulo = new System.Windows.Forms.Button();
-            this.btnModificarArticulo = new System.Windows.Forms.Button();
-            this.btnVerDetallesArticulo = new System.Windows.Forms.Button();
-            this.btnAddArticulo = new System.Windows.Forms.Button();
             this.artCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,6 +36,10 @@
             this.artCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artImg = new System.Windows.Forms.DataGridViewImageColumn();
             this.artPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btnEliminarArticulo = new System.Windows.Forms.Button();
+            this.btnModificarArticulo = new System.Windows.Forms.Button();
+            this.btnVerDetallesArticulo = new System.Windows.Forms.Button();
+            this.btnAddArticulo = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,44 +65,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(790, 420);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // btnEliminarArticulo
-            // 
-            this.btnEliminarArticulo.Location = new System.Drawing.Point(642, 474);
-            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
-            this.btnEliminarArticulo.Size = new System.Drawing.Size(160, 35);
-            this.btnEliminarArticulo.TabIndex = 1;
-            this.btnEliminarArticulo.Text = "Eliminar Articulo";
-            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
-            this.btnEliminarArticulo.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnModificarArticulo
-            // 
-            this.btnModificarArticulo.Location = new System.Drawing.Point(12, 10);
-            this.btnModificarArticulo.Name = "btnModificarArticulo";
-            this.btnModificarArticulo.Size = new System.Drawing.Size(120, 30);
-            this.btnModificarArticulo.TabIndex = 2;
-            this.btnModificarArticulo.Text = "Modificar Artículo";
-            this.btnModificarArticulo.UseVisualStyleBackColor = true;
-            // 
-            // btnVerDetallesArticulo
-            // 
-            this.btnVerDetallesArticulo.Location = new System.Drawing.Point(139, 10);
-            this.btnVerDetallesArticulo.Name = "btnVerDetallesArticulo";
-            this.btnVerDetallesArticulo.Size = new System.Drawing.Size(120, 30);
-            this.btnVerDetallesArticulo.TabIndex = 3;
-            this.btnVerDetallesArticulo.Text = "Ver Detalles";
-            this.btnVerDetallesArticulo.UseVisualStyleBackColor = true;
-            this.btnVerDetallesArticulo.Click += new System.EventHandler(this.btn_Click);
-            // 
-            // btnAddArticulo
-            // 
-            this.btnAddArticulo.Location = new System.Drawing.Point(266, 10);
-            this.btnAddArticulo.Name = "btnAddArticulo";
-            this.btnAddArticulo.Size = new System.Drawing.Size(120, 30);
-            this.btnAddArticulo.TabIndex = 4;
-            this.btnAddArticulo.Text = "Añadir Articulo";
-            this.btnAddArticulo.UseVisualStyleBackColor = true;
             // 
             // artCode
             // 
@@ -166,6 +128,44 @@
             this.artPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
             this.artPrice.Width = 62;
             // 
+            // btnEliminarArticulo
+            // 
+            this.btnEliminarArticulo.Location = new System.Drawing.Point(642, 474);
+            this.btnEliminarArticulo.Name = "btnEliminarArticulo";
+            this.btnEliminarArticulo.Size = new System.Drawing.Size(160, 35);
+            this.btnEliminarArticulo.TabIndex = 1;
+            this.btnEliminarArticulo.Text = "Eliminar Articulo";
+            this.btnEliminarArticulo.UseVisualStyleBackColor = true;
+            this.btnEliminarArticulo.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // btnModificarArticulo
+            // 
+            this.btnModificarArticulo.Location = new System.Drawing.Point(12, 10);
+            this.btnModificarArticulo.Name = "btnModificarArticulo";
+            this.btnModificarArticulo.Size = new System.Drawing.Size(120, 30);
+            this.btnModificarArticulo.TabIndex = 2;
+            this.btnModificarArticulo.Text = "Modificar Artículo";
+            this.btnModificarArticulo.UseVisualStyleBackColor = true;
+            // 
+            // btnVerDetallesArticulo
+            // 
+            this.btnVerDetallesArticulo.Location = new System.Drawing.Point(139, 10);
+            this.btnVerDetallesArticulo.Name = "btnVerDetallesArticulo";
+            this.btnVerDetallesArticulo.Size = new System.Drawing.Size(120, 30);
+            this.btnVerDetallesArticulo.TabIndex = 3;
+            this.btnVerDetallesArticulo.Text = "Ver Detalles";
+            this.btnVerDetallesArticulo.UseVisualStyleBackColor = true;
+            this.btnVerDetallesArticulo.Click += new System.EventHandler(this.btn_Click);
+            // 
+            // btnAddArticulo
+            // 
+            this.btnAddArticulo.Location = new System.Drawing.Point(266, 10);
+            this.btnAddArticulo.Name = "btnAddArticulo";
+            this.btnAddArticulo.Size = new System.Drawing.Size(120, 30);
+            this.btnAddArticulo.TabIndex = 4;
+            this.btnAddArticulo.Text = "Añadir Articulo";
+            this.btnAddArticulo.UseVisualStyleBackColor = true;
+            // 
             // CATALOGO
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -176,10 +176,11 @@
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.dataGridView1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CATALOGO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CATALOGO";
+            this.Load += new System.EventHandler(this.CATALOGO_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
