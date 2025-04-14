@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CATALOGO));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.artCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.artName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -176,6 +177,7 @@
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.dataGridView1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "CATALOGO";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

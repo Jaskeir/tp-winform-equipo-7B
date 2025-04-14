@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NUEVA_MARCA));
             this.lbNuevaMarca = new System.Windows.Forms.Label();
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.btnAgregar = new System.Windows.Forms.Button();
@@ -37,25 +38,28 @@
             // lbNuevaMarca
             // 
             this.lbNuevaMarca.AutoSize = true;
-            this.lbNuevaMarca.Location = new System.Drawing.Point(59, 76);
+            this.lbNuevaMarca.Location = new System.Drawing.Point(30, 40);
+            this.lbNuevaMarca.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbNuevaMarca.Name = "lbNuevaMarca";
-            this.lbNuevaMarca.Size = new System.Drawing.Size(110, 25);
+            this.lbNuevaMarca.Size = new System.Drawing.Size(57, 13);
             this.lbNuevaMarca.TabIndex = 0;
             this.lbNuevaMarca.Text = "NOMBRE:";
             this.lbNuevaMarca.Click += new System.EventHandler(this.label1_Click);
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(175, 70);
+            this.txtNombre.Location = new System.Drawing.Point(88, 36);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(284, 31);
+            this.txtNombre.Size = new System.Drawing.Size(144, 20);
             this.txtNombre.TabIndex = 1;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(60, 148);
+            this.btnAgregar.Location = new System.Drawing.Point(30, 77);
+            this.btnAgregar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(163, 49);
+            this.btnAgregar.Size = new System.Drawing.Size(82, 25);
             this.btnAgregar.TabIndex = 2;
             this.btnAgregar.Text = "ACEPTAR";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -63,9 +67,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(294, 148);
+            this.btnCancelar.Location = new System.Drawing.Point(147, 77);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(165, 49);
+            this.btnCancelar.Size = new System.Drawing.Size(82, 25);
             this.btnCancelar.TabIndex = 3;
             this.btnCancelar.Text = "CANCELAR";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -73,13 +78,15 @@
             // 
             // NUEVA_MARCA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(526, 226);
+            this.ClientSize = new System.Drawing.Size(263, 118);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.txtNombre);
             this.Controls.Add(this.lbNuevaMarca);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "NUEVA_MARCA";
             this.Text = "NUEVA MARCA";
             this.ResumeLayout(false);

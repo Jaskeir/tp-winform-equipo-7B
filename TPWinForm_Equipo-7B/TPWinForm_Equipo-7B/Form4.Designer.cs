@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(G_MARCA));
             this.dgvMarcas = new System.Windows.Forms.DataGridView();
             this.button2 = new System.Windows.Forms.Button();
             this.MODIFICARCATLOGO = new System.Windows.Forms.Button();
@@ -37,19 +38,21 @@
             // dgvMarcas
             // 
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMarcas.Location = new System.Drawing.Point(73, 83);
+            this.dgvMarcas.Location = new System.Drawing.Point(36, 43);
+            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersWidth = 82;
             this.dgvMarcas.RowTemplate.Height = 33;
-            this.dgvMarcas.Size = new System.Drawing.Size(654, 284);
+            this.dgvMarcas.Size = new System.Drawing.Size(327, 148);
             this.dgvMarcas.TabIndex = 3;
             this.dgvMarcas.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(434, 405);
+            this.button2.Location = new System.Drawing.Point(217, 211);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(293, 69);
+            this.button2.Size = new System.Drawing.Size(146, 36);
             this.button2.TabIndex = 7;
             this.button2.Text = "ELIMINAR MARCA";
             this.button2.UseVisualStyleBackColor = true;
@@ -57,9 +60,10 @@
             // 
             // MODIFICARCATLOGO
             // 
-            this.MODIFICARCATLOGO.Location = new System.Drawing.Point(73, 405);
+            this.MODIFICARCATLOGO.Location = new System.Drawing.Point(36, 211);
+            this.MODIFICARCATLOGO.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MODIFICARCATLOGO.Name = "MODIFICARCATLOGO";
-            this.MODIFICARCATLOGO.Size = new System.Drawing.Size(275, 69);
+            this.MODIFICARCATLOGO.Size = new System.Drawing.Size(138, 36);
             this.MODIFICARCATLOGO.TabIndex = 6;
             this.MODIFICARCATLOGO.Text = "NUEVA MARCA";
             this.MODIFICARCATLOGO.UseVisualStyleBackColor = true;
@@ -67,12 +71,14 @@
             // 
             // G_MARCA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 486);
+            this.ClientSize = new System.Drawing.Size(418, 253);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.MODIFICARCATLOGO);
             this.Controls.Add(this.dgvMarcas);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "G_MARCA";
             this.Text = "GESTION DE MARCAS";
             this.Load += new System.EventHandler(this.MARCAS_Load);
