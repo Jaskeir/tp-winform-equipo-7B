@@ -39,7 +39,9 @@ namespace TPWinForm_Equipo_7B
 
         private void button3_Click(object sender, EventArgs e)
         {
-            
+            vCategorias vCate = new vCategorias();
+
+            vCate.ShowDialog();
         }
     }
 }
