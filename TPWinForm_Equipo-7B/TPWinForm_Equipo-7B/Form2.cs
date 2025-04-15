@@ -29,7 +29,8 @@ namespace TPWinForm_Equipo_7B
 
         private void CATALOGO_Load(object sender, EventArgs e)
         {
-
+            ManagerArticulo datos = new ManagerArticulo();
+            dataGridView1.DataSource = datos.Listar();
         }
     }
 }

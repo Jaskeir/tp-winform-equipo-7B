@@ -24,7 +24,7 @@ namespace TPWinForm_Equipo_7B
                 {
                     Categoria aux = new Categoria();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.Nombre = (string)datos.Lector["Descripcion"];
 
                     lista.Add(aux);
                 }

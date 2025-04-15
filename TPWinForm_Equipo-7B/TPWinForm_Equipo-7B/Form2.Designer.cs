@@ -30,13 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CATALOGO));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.artCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artDescription = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artBrand = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artCategory = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.artImg = new System.Windows.Forms.DataGridViewImageColumn();
-            this.artPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
             this.btnVerDetallesArticulo = new System.Windows.Forms.Button();
@@ -50,14 +43,6 @@
             this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.AllowUserToResizeRows = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.artCode,
-            this.artName,
-            this.artDescription,
-            this.artBrand,
-            this.artCategory,
-            this.artImg,
-            this.artPrice});
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.dataGridView1.Location = new System.Drawing.Point(12, 46);
             this.dataGridView1.MultiSelect = false;
@@ -66,68 +51,6 @@
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(790, 420);
             this.dataGridView1.TabIndex = 0;
-            // 
-            // artCode
-            // 
-            this.artCode.Frozen = true;
-            this.artCode.HeaderText = "Cod Artículo";
-            this.artCode.Name = "artCode";
-            this.artCode.ReadOnly = true;
-            this.artCode.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.artCode.Width = 91;
-            // 
-            // artName
-            // 
-            this.artName.Frozen = true;
-            this.artName.HeaderText = "Nombre";
-            this.artName.Name = "artName";
-            this.artName.ReadOnly = true;
-            this.artName.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.artName.Width = 69;
-            // 
-            // artDescription
-            // 
-            this.artDescription.Frozen = true;
-            this.artDescription.HeaderText = "Descripción";
-            this.artDescription.Name = "artDescription";
-            this.artDescription.ReadOnly = true;
-            this.artDescription.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.artDescription.Width = 88;
-            // 
-            // artBrand
-            // 
-            this.artBrand.Frozen = true;
-            this.artBrand.HeaderText = "Marca";
-            this.artBrand.Name = "artBrand";
-            this.artBrand.ReadOnly = true;
-            this.artBrand.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.artBrand.Width = 62;
-            // 
-            // artCategory
-            // 
-            this.artCategory.Frozen = true;
-            this.artCategory.HeaderText = "Categoría";
-            this.artCategory.Name = "artCategory";
-            this.artCategory.ReadOnly = true;
-            this.artCategory.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.artCategory.Width = 79;
-            // 
-            // artImg
-            // 
-            this.artImg.Frozen = true;
-            this.artImg.HeaderText = "Imagen";
-            this.artImg.Name = "artImg";
-            this.artImg.ReadOnly = true;
-            this.artImg.Width = 48;
-            // 
-            // artPrice
-            // 
-            this.artPrice.Frozen = true;
-            this.artPrice.HeaderText = "Precio";
-            this.artPrice.Name = "artPrice";
-            this.artPrice.ReadOnly = true;
-            this.artPrice.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Programmatic;
-            this.artPrice.Width = 62;
             // 
             // btnEliminarArticulo
             // 
@@ -195,12 +118,5 @@
         private System.Windows.Forms.Button btnModificarArticulo;
         private System.Windows.Forms.Button btnVerDetallesArticulo;
         private System.Windows.Forms.Button btnAddArticulo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artCode;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artDescription;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artBrand;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artCategory;
-        private System.Windows.Forms.DataGridViewImageColumn artImg;
-        private System.Windows.Forms.DataGridViewTextBoxColumn artPrice;
     }
 }

@@ -63,6 +63,7 @@
       <DependentUpon>Form6.cs</DependentUpon>
     </Compile>
     <Compile Include="Imagen.cs" />
+    <Compile Include="ManagerArticulo.cs" />
     <Compile Include="ManagerCategorias.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Form1.cs">
