@@ -19,6 +19,19 @@ namespace TPWinForm_Equipo_7B
 
         private void vCategorias_Load(object sender, EventArgs e)
         {
+            cargarCategorias();
+            
+        }
+
+        private void btnAgregarCate_Click(object sender, EventArgs e)
+        {
+            FormNuevaCategoria formAgregarCate = new FormNuevaCategoria();
+            formAgregarCate.ShowDialog();
+            cargarCategorias();
+        }
+
+        private void cargarCategorias()
+        {
             ManagerCategorias managerCate = new ManagerCategorias();
             try
             {
@@ -27,15 +40,8 @@ namespace TPWinForm_Equipo_7B
             catch (Exception ex)
             {
 
-                ex.ToString();
+                MessageBox.Show(ex.ToString());
             }
-            
-        }
-
-        private void btnAgregarCate_Click(object sender, EventArgs e)
-        {
-            FormNuevaCategoria formAgregarCate = new FormNuevaCategoria();
-            formAgregarCate.ShowDialog();
         }
     }
 }
