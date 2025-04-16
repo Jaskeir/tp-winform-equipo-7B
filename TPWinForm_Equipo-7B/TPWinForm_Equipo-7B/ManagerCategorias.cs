@@ -24,7 +24,15 @@ namespace TPWinForm_Equipo_7B
                 {
                     Categoria aux = new Categoria();
                     aux.Id = (int)datos.Lector["Id"];
-                    aux.Nombre = (string)datos.Lector["Descripcion"];
+
+
+                    // VERIFICAR POSIBLES NULL 
+                    if(!(datos.Lector["Descripcion"] is DBNull))
+                    {
+                        aux.Nombre = (string)datos.Lector["Descripcion"];
+                    }
+                    // FIN VERIFICAR POSIBLES NULL
+                    
 
                     lista.Add(aux);
                 }
@@ -39,6 +47,27 @@ namespace TPWinForm_Equipo_7B
             {
                 datos.cerrarConexion();
 
+            }
+        }
+
+
+        public void agregarCategoria(Categoria nueva)
+        {
+
+            Admin_Datos datos = new Admin_Datos();
+            try
+            {
+                datos.setearConsulta("Insert into Categorias(Descripcion)values('" + nueva.Nombre + "')");
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
+            }
+            finally
+            {
+                datos.cerrarConexion();
             }
         }
     }

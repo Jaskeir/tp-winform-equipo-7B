@@ -20,8 +20,22 @@ namespace TPWinForm_Equipo_7B
         private void vCategorias_Load(object sender, EventArgs e)
         {
             ManagerCategorias managerCate = new ManagerCategorias();
+            try
+            {
+                dataGridViewCategorias.DataSource = managerCate.Listar();
+            }
+            catch (Exception ex)
+            {
 
-            dataGridViewCategorias.DataSource = managerCate.Listar();
+                ex.ToString();
+            }
+            
+        }
+
+        private void btnAgregarCate_Click(object sender, EventArgs e)
+        {
+            FormNuevaCategoria formAgregarCate = new FormNuevaCategoria();
+            formAgregarCate.ShowDialog();
         }
     }
 }
