@@ -5,8 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-
-namespace TPWinForm_Equipo_7B
+namespace dominio
 {
     public class Admin_Datos
     {

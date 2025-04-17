@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace TPWinForm_Equipo_7B
+namespace dominio
 {
     public class Articulo
     {
@@ -14,7 +14,7 @@ namespace TPWinForm_Equipo_7B
         public string Descripcion { get; set; }
         public Marca Marca {  get; set; }
         public Categoria Categoria { get; set; }
-        public Imagen Imagen { get; set; }
+        public List<Imagen> Imagenes { get; set; }
 
     }
 }

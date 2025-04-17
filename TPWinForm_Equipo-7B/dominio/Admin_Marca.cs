@@ -6,9 +6,7 @@ using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Data.SqlClient;
 
-
-
-namespace TPWinForm_Equipo_7B
+namespace dominio
 {
    
     public class Admin_Marca

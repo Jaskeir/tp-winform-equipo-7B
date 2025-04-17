@@ -7,11 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using dominio;
 
 namespace TPWinForm_Equipo_7B
 {
     public partial class CATALOGO : Form
     {
+        private List<Articulo> listaArticulos;
+
         public CATALOGO()
         {
             InitializeComponent();
@@ -30,7 +33,8 @@ namespace TPWinForm_Equipo_7B
         private void CATALOGO_Load(object sender, EventArgs e)
         {
             ManagerArticulo datos = new ManagerArticulo();
-            dataGridView1.DataSource = datos.Listar();
+            listaArticulos = datos.Listar();
+            dataGridView1.DataSource = listaArticulos;
         }
     }
 }

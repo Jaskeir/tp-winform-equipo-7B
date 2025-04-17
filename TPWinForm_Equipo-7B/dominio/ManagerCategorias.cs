@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TPWinForm_Equipo_7B
+namespace dominio
 {
-    class ManagerCategorias
+    public class ManagerCategorias
     {
         public List<Categoria> Listar()
         {
