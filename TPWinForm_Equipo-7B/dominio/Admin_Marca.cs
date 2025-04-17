@@ -5,8 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 using System.Data.SqlClient;
+using dominio;
+using ConexionDB;
 
-namespace dominio
+namespace ConexionDB
 {
    
     public class Admin_Marca

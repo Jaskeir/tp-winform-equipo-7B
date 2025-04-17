@@ -134,6 +134,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConexionDB\ConexionDB.csproj">
+      <Project>{3ce08dc6-e801-4279-9c6c-b0a8d3bbee86}</Project>
+      <Name>ConexionDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dominio\dominio.csproj">
       <Project>{4998e45f-58cf-41e0-ac79-0afee5902ed3}</Project>
       <Name>dominio</Name>

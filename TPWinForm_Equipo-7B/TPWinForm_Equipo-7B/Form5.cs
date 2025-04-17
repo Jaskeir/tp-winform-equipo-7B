@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml.Linq;
 using dominio;
+using ConexionDB;
 
 namespace TPWinForm_Equipo_7B
 {
