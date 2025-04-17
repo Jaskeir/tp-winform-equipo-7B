@@ -70,5 +70,28 @@ namespace TPWinForm_Equipo_7B
                 datos.cerrarConexion();
             }
         }
+
+
+        public void modificar(Categoria categoria)
+        {
+
+            Admin_Datos datos = new Admin_Datos();
+            try
+            {
+                datos.setearConsulta("Update Categorias set Descripcion = @desc where Id = @id");
+                datos.setearParametro("@desc", categoria.Nombre);
+                datos.setearParametro("@id", categoria.Id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
     }
 }

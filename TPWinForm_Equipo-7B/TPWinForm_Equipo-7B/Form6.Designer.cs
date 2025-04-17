@@ -31,6 +31,7 @@ namespace TPWinForm_Equipo_7B
         {
             this.dataGridViewCategorias = new System.Windows.Forms.DataGridView();
             this.btnAgregarCate = new System.Windows.Forms.Button();
+            this.btnModificarCate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +56,22 @@ namespace TPWinForm_Equipo_7B
             this.btnAgregarCate.UseVisualStyleBackColor = true;
             this.btnAgregarCate.Click += new System.EventHandler(this.btnAgregarCate_Click);
             // 
+            // btnModificarCate
+            // 
+            this.btnModificarCate.Location = new System.Drawing.Point(131, 254);
+            this.btnModificarCate.Name = "btnModificarCate";
+            this.btnModificarCate.Size = new System.Drawing.Size(75, 23);
+            this.btnModificarCate.TabIndex = 2;
+            this.btnModificarCate.Text = "Modificar";
+            this.btnModificarCate.UseVisualStyleBackColor = true;
+            this.btnModificarCate.Click += new System.EventHandler(this.btnModificarCate_Click);
+            // 
             // vCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(503, 325);
+            this.Controls.Add(this.btnModificarCate);
             this.Controls.Add(this.btnAgregarCate);
             this.Controls.Add(this.dataGridViewCategorias);
             this.Name = "vCategorias";
@@ -74,5 +86,6 @@ namespace TPWinForm_Equipo_7B
 
         private System.Windows.Forms.DataGridView dataGridViewCategorias;
         private System.Windows.Forms.Button btnAgregarCate;
+        private System.Windows.Forms.Button btnModificarCate;
     }
 }

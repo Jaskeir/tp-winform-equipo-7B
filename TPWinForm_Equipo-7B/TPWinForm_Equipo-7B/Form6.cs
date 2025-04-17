@@ -43,5 +43,16 @@ namespace TPWinForm_Equipo_7B
                 MessageBox.Show(ex.ToString());
             }
         }
+
+        private void btnModificarCate_Click(object sender, EventArgs e)
+        {
+            Categoria seleccionada;
+
+            seleccionada = (Categoria)dataGridViewCategorias.CurrentRow.DataBoundItem;
+
+            FormNuevaCategoria modificar = new FormNuevaCategoria(seleccionada);
+            modificar.ShowDialog();
+            cargarCategorias();
+        }
     }
 }

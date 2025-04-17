@@ -33,7 +33,6 @@ namespace TPWinForm_Equipo_7B
             this.btnCancelarCate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtBoxAgregarCate = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnAceptarCate
@@ -77,29 +76,19 @@ namespace TPWinForm_Equipo_7B
             this.txtBoxAgregarCate.Size = new System.Drawing.Size(100, 20);
             this.txtBoxAgregarCate.TabIndex = 3;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(46, 30);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(179, 20);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "NUEVA CATEGORIA";
-            // 
             // FormNuevaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(280, 227);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.txtBoxAgregarCate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelarCate);
             this.Controls.Add(this.btnAceptarCate);
             this.Name = "FormNuevaCategoria";
             this.Text = "Form7";
+            this.Load += new System.EventHandler(this.FormNuevaCategoria_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -111,6 +100,5 @@ namespace TPWinForm_Equipo_7B
         private System.Windows.Forms.Button btnCancelarCate;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtBoxAgregarCate;
-        private System.Windows.Forms.Label label2;
     }
 }
