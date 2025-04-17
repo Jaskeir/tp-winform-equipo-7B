@@ -25,7 +25,7 @@ namespace TPWinForm_Equipo_7B
 
         private void button1_Click(object sender, EventArgs e)
         {
-            CATALOGO VCATALOGO = new CATALOGO();
+            ventanaArticulos VCATALOGO = new ventanaArticulos();
 
             VCATALOGO.ShowDialog();
 
@@ -40,9 +40,9 @@ namespace TPWinForm_Equipo_7B
 
         private void button3_Click(object sender, EventArgs e)
         {
-            vCategorias vCate = new vCategorias();
+            ventanaArticulos vArticulos = new ventanaArticulos();
 
-            vCate.ShowDialog();
+            vArticulos.ShowDialog();
         }
     }
 }

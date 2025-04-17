@@ -11,11 +11,11 @@ using dominio;
 
 namespace TPWinForm_Equipo_7B
 {
-    public partial class CATALOGO : Form
+    public partial class ventanaArticulos : Form
     {
         private List<Articulo> listaArticulos;
 
-        public CATALOGO()
+        public ventanaArticulos()
         {
             InitializeComponent();
         }
@@ -35,6 +35,14 @@ namespace TPWinForm_Equipo_7B
             ManagerArticulo datos = new ManagerArticulo();
             listaArticulos = datos.Listar();
             dataGridView1.DataSource = listaArticulos;
+        }
+
+        private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            frmArticleImages frmImages = new frmArticleImages();
+
+            frmImages.Text = "Imagenes de " + listaArticulos[e.RowIndex].Nombre;
+            frmImages.ShowDialog();
         }
     }
 }

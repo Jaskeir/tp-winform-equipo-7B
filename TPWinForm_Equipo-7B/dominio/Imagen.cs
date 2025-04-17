@@ -8,6 +8,10 @@ namespace dominio
 {
     public class Imagen
     {
-        public string url { get; set; }
+        public string Url { get; }
+        public Imagen(string url)
+        {
+            Url = url;
+        }
     }
 }
