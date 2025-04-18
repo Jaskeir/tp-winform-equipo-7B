@@ -14,7 +14,7 @@ namespace TPWinForm_Equipo_7B
     public partial class ventanaArticulos : Form
     {
         private List<Articulo> listaArticulos;
-
+        
         public ventanaArticulos()
         {
             InitializeComponent();
@@ -39,7 +39,8 @@ namespace TPWinForm_Equipo_7B
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            frmArticleImages frmImages = new frmArticleImages();
+
+            frmArticleImages frmImages = new frmArticleImages(listaArticulos[e.RowIndex].Imagenes);
 
             frmImages.Text = "Imagenes de " + listaArticulos[e.RowIndex].Nombre;
             frmImages.ShowDialog();

@@ -58,11 +58,6 @@ namespace dominio
 
                     lista.Add(articulo);
                 }
-                
-
-
-                //articulo.Imagen.URL = (string)reader["ImagenURL"];
-
                 return lista;
             }
             catch (Exception ex)
