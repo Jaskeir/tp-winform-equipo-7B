@@ -36,14 +36,24 @@ namespace TPWinForm_Equipo_7B
         
             Marca marca = new Marca();
             Admin_Marca nueva = new Admin_Marca();
+            Validaciones val = new Validaciones();
 
             try
             {
                 marca.Nombre = txtNombre.Text;
-              
-                nueva.agregar(marca);
-                MessageBox.Show("Agregado exitosamente");
-                Close();
+                if (txtNombre.Text != "" && txtNombre.Text.Length >= 2 && !val.soloNumeros(txtNombre.Text))
+                    {
+
+                    nueva.agregar(marca);
+                    MessageBox.Show("Agregado exitosamente");
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo crear la marca. Ingrese un nombre con al menos dos caracteres, uno de los cuales debe ser una letra");
+
+                }
+
+                    Close();
 
             }
             catch (Exception ex)

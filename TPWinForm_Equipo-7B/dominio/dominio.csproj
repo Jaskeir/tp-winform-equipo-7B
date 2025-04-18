@@ -44,6 +44,7 @@
     <Compile Include="Admin_Marca.cs" />
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
+    <Compile Include="Validaciones.cs" />
     <Compile Include="Imagen.cs" />
     <Compile Include="ManagerArticulo.cs" />
     <Compile Include="ManagerCategorias.cs" />
