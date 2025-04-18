@@ -55,5 +55,34 @@ namespace TPWinForm_Equipo_7B
             modificar.ShowDialog();
             cargarCategorias();
         }
+
+        private void btnEliminarCate_Click(object sender, EventArgs e)
+        {
+            ManagerCategorias manager = new ManagerCategorias();
+            Categoria seleccionada;
+            try
+            {
+                DialogResult respuesta = MessageBox.Show("¿Desea eliminar el registro seleccionado?","Eliminando",MessageBoxButtons.YesNo,MessageBoxIcon.Warning);
+                if(respuesta == DialogResult.Yes)
+                {
+                    seleccionada = (Categoria)dataGridViewCategorias.CurrentRow.DataBoundItem;
+                    manager.eliminarCategoria(seleccionada.Id);
+                    MessageBox.Show( "Registro eliminado");
+                    cargarCategorias();
+                } 
+                
+                    
+                
+               
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.ToString());
+            }
+            
+              
+            
+        }
     }
 }

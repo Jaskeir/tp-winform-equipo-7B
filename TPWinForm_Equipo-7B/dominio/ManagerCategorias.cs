@@ -73,7 +73,7 @@ namespace dominio
         }
 
 
-        public void modificar(Categoria categoria)
+        public void modificarCategoria(Categoria categoria)
         {
 
             Admin_Datos datos = new Admin_Datos();
@@ -94,5 +94,30 @@ namespace dominio
                 datos.cerrarConexion();
             }
         }
+
+        public void eliminarCategoria(int id)
+        {
+            Admin_Datos datos = new Admin_Datos();
+
+            try
+            {
+                
+                datos.setearConsulta("Delete from Categorias WHERE Id = @id");
+                datos.setearParametro("@id", id);
+                datos.ejecutarAccion();
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+
+        }
+
+
     }
 }

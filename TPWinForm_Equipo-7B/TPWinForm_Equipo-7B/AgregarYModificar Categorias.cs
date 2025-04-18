@@ -47,7 +47,7 @@ namespace TPWinForm_Equipo_7B
 
                 if(categoria.Id!=0)
                 {
-                    manager.modificar(categoria);
+                    manager.modificarCategoria(categoria);
                     MessageBox.Show("Modificado exitosamente");
                 } else
                 {

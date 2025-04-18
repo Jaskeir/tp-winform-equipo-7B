@@ -40,9 +40,9 @@ namespace TPWinForm_Equipo_7B
 
         private void button3_Click(object sender, EventArgs e)
         {
-            ventanaArticulos vArticulos = new ventanaArticulos();
+            vCategorias ventanaCate = new vCategorias();
 
-            vArticulos.ShowDialog();
+            ventanaCate.ShowDialog();
         }
     }
 }

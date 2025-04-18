@@ -52,17 +52,17 @@
     <Compile Include="Nueva marca.Designer.cs">
       <DependentUpon>Nueva marca.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form6.cs">
+    <Compile Include="Ventana Categorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form6.Designer.cs">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <Compile Include="Ventana Categorias.Designer.cs">
+      <DependentUpon>Ventana Categorias.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form7.cs">
+    <Compile Include="AgregarYModificar Categorias.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form7.Designer.cs">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <Compile Include="AgregarYModificar Categorias.Designer.cs">
+      <DependentUpon>AgregarYModificar Categorias.cs</DependentUpon>
     </Compile>
     <Compile Include="Ventana Inicial.cs">
       <SubType>Form</SubType>
@@ -111,11 +111,11 @@
     <EmbeddedResource Include="Nueva marca.resx">
       <DependentUpon>Nueva marca.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form6.resx">
-      <DependentUpon>Form6.cs</DependentUpon>
+    <EmbeddedResource Include="Ventana Categorias.resx">
+      <DependentUpon>Ventana Categorias.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form7.resx">
-      <DependentUpon>Form7.cs</DependentUpon>
+    <EmbeddedResource Include="AgregarYModificar Categorias.resx">
+      <DependentUpon>AgregarYModificar Categorias.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form8.resx">
       <DependentUpon>Form8.cs</DependentUpon>
