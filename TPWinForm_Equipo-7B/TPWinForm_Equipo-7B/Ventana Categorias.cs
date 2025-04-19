@@ -27,6 +27,7 @@ namespace TPWinForm_Equipo_7B
         private void btnAgregarCate_Click(object sender, EventArgs e)
         {
             FormNuevaCategoria formAgregarCate = new FormNuevaCategoria();
+            formAgregarCate.Text = "Agregar Categoria";
             formAgregarCate.ShowDialog();
             cargarCategorias();
         }

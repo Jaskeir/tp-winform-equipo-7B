@@ -54,9 +54,6 @@ namespace TPWinForm_Equipo_7B
                     manager.agregarCategoria(categoria);
                     MessageBox.Show("Agregado exitosamente");
                 }
-
-                
-
                 Close();
             }
             catch (Exception ex)

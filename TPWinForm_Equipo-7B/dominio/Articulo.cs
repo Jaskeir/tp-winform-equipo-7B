@@ -17,5 +17,10 @@ namespace dominio
         public List<Imagen> Imagenes { get; set; }
         public decimal Precio { get; set; }
 
+        public Articulo()
+        {
+            Imagenes = new List<Imagen>();
+        }
+
     }
 }

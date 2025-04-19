@@ -39,17 +39,17 @@
             this.btnAdminCategorias = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
             this.lblPrecio = new System.Windows.Forms.Label();
-            this.txtBoxPrice = new System.Windows.Forms.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.txtBoxPrecioArticulo = new System.Windows.Forms.TextBox();
+            this.pictureBoxArticulo = new System.Windows.Forms.PictureBox();
             this.lblUrlImage = new System.Windows.Forms.Label();
-            this.textBoxURL = new System.Windows.Forms.TextBox();
+            this.txtBoxURL = new System.Windows.Forms.TextBox();
             this.btnLoadImage = new System.Windows.Forms.Button();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.btnEliminarImg = new System.Windows.Forms.Button();
             this.addImg = new System.Windows.Forms.Button();
             this.txtBoxDescripcionArticulo = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.listBoxImgURL = new System.Windows.Forms.ListBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // lblNombreArticulo
@@ -104,7 +104,6 @@
             this.lblCategoriaArticulo.Size = new System.Drawing.Size(114, 13);
             this.lblCategoriaArticulo.TabIndex = 6;
             this.lblCategoriaArticulo.Text = "Categoría del Artículo:";
-            this.lblCategoriaArticulo.Click += new System.EventHandler(this.lblCategoriaArticulo_Click);
             // 
             // comboBoxCategoria
             // 
@@ -143,6 +142,7 @@
             this.btnCancelar.TabIndex = 10;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
             // lblPrecio
             // 
@@ -153,20 +153,21 @@
             this.lblPrecio.TabIndex = 11;
             this.lblPrecio.Text = "Precio:";
             // 
-            // txtBoxPrice
+            // txtBoxPrecioArticulo
             // 
-            this.txtBoxPrice.Location = new System.Drawing.Point(134, 80);
-            this.txtBoxPrice.Name = "txtBoxPrice";
-            this.txtBoxPrice.Size = new System.Drawing.Size(298, 20);
-            this.txtBoxPrice.TabIndex = 12;
+            this.txtBoxPrecioArticulo.Location = new System.Drawing.Point(134, 80);
+            this.txtBoxPrecioArticulo.Name = "txtBoxPrecioArticulo";
+            this.txtBoxPrecioArticulo.Size = new System.Drawing.Size(298, 20);
+            this.txtBoxPrecioArticulo.TabIndex = 12;
             // 
-            // pictureBox1
+            // pictureBoxArticulo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(237, 155);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(195, 200);
-            this.pictureBox1.TabIndex = 13;
-            this.pictureBox1.TabStop = false;
+            this.pictureBoxArticulo.Location = new System.Drawing.Point(245, 165);
+            this.pictureBoxArticulo.Name = "pictureBoxArticulo";
+            this.pictureBoxArticulo.Size = new System.Drawing.Size(180, 180);
+            this.pictureBoxArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxArticulo.TabIndex = 13;
+            this.pictureBoxArticulo.TabStop = false;
             // 
             // lblUrlImage
             // 
@@ -177,12 +178,12 @@
             this.lblUrlImage.TabIndex = 14;
             this.lblUrlImage.Text = "Imagen URL:";
             // 
-            // textBoxURL
+            // txtBoxURL
             // 
-            this.textBoxURL.Location = new System.Drawing.Point(134, 105);
-            this.textBoxURL.Name = "textBoxURL";
-            this.textBoxURL.Size = new System.Drawing.Size(218, 20);
-            this.textBoxURL.TabIndex = 15;
+            this.txtBoxURL.Location = new System.Drawing.Point(134, 105);
+            this.txtBoxURL.Name = "txtBoxURL";
+            this.txtBoxURL.Size = new System.Drawing.Size(218, 20);
+            this.txtBoxURL.TabIndex = 15;
             // 
             // btnLoadImage
             // 
@@ -192,33 +193,27 @@
             this.btnLoadImage.TabIndex = 16;
             this.btnLoadImage.Text = "Cargar";
             this.btnLoadImage.UseVisualStyleBackColor = true;
-            // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(10, 155);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(210, 200);
-            this.listView1.TabIndex = 17;
-            this.listView1.UseCompatibleStateImageBehavior = false;
+            this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
             // 
             // btnEliminarImg
             // 
-            this.btnEliminarImg.Location = new System.Drawing.Point(10, 361);
+            this.btnEliminarImg.Location = new System.Drawing.Point(10, 360);
             this.btnEliminarImg.Name = "btnEliminarImg";
-            this.btnEliminarImg.Size = new System.Drawing.Size(95, 21);
+            this.btnEliminarImg.Size = new System.Drawing.Size(210, 21);
             this.btnEliminarImg.TabIndex = 18;
             this.btnEliminarImg.Text = "Eliminar Imagen";
             this.btnEliminarImg.UseVisualStyleBackColor = true;
+            this.btnEliminarImg.Click += new System.EventHandler(this.btnEliminarImg_Click);
             // 
             // addImg
             // 
-            this.addImg.Location = new System.Drawing.Point(125, 361);
+            this.addImg.Location = new System.Drawing.Point(245, 360);
             this.addImg.Name = "addImg";
-            this.addImg.Size = new System.Drawing.Size(95, 21);
+            this.addImg.Size = new System.Drawing.Size(180, 21);
             this.addImg.TabIndex = 19;
             this.addImg.Text = "Añadir Imagen";
             this.addImg.UseVisualStyleBackColor = true;
+            this.addImg.Click += new System.EventHandler(this.addImg_Click);
             // 
             // txtBoxDescripcionArticulo
             // 
@@ -226,7 +221,6 @@
             this.txtBoxDescripcionArticulo.Name = "txtBoxDescripcionArticulo";
             this.txtBoxDescripcionArticulo.Size = new System.Drawing.Size(298, 20);
             this.txtBoxDescripcionArticulo.TabIndex = 20;
-            this.txtBoxDescripcionArticulo.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // lblDescripcion
             // 
@@ -237,21 +231,30 @@
             this.lblDescripcion.TabIndex = 21;
             this.lblDescripcion.Text = "Descripcion";
             // 
+            // listBoxImgURL
+            // 
+            this.listBoxImgURL.FormattingEnabled = true;
+            this.listBoxImgURL.Location = new System.Drawing.Point(13, 165);
+            this.listBoxImgURL.Name = "listBoxImgURL";
+            this.listBoxImgURL.Size = new System.Drawing.Size(207, 186);
+            this.listBoxImgURL.TabIndex = 22;
+            this.listBoxImgURL.DoubleClick += new System.EventHandler(this.listBoxImgURL_DoubleClick);
+            // 
             // addArticle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 426);
+            this.Controls.Add(this.listBoxImgURL);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txtBoxDescripcionArticulo);
             this.Controls.Add(this.addImg);
             this.Controls.Add(this.btnEliminarImg);
-            this.Controls.Add(this.listView1);
             this.Controls.Add(this.btnLoadImage);
-            this.Controls.Add(this.textBoxURL);
+            this.Controls.Add(this.txtBoxURL);
             this.Controls.Add(this.lblUrlImage);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txtBoxPrice);
+            this.Controls.Add(this.pictureBoxArticulo);
+            this.Controls.Add(this.txtBoxPrecioArticulo);
             this.Controls.Add(this.lblPrecio);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAdminCategorias);
@@ -267,7 +270,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir Artículo";
             this.Load += new System.EventHandler(this.addArticle_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -286,15 +289,15 @@
         private System.Windows.Forms.Button btnAdminCategorias;
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.TextBox txtBoxPrice;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.TextBox txtBoxPrecioArticulo;
+        private System.Windows.Forms.PictureBox pictureBoxArticulo;
         private System.Windows.Forms.Label lblUrlImage;
-        private System.Windows.Forms.TextBox textBoxURL;
+        private System.Windows.Forms.TextBox txtBoxURL;
         private System.Windows.Forms.Button btnLoadImage;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btnEliminarImg;
         private System.Windows.Forms.Button addImg;
         private System.Windows.Forms.TextBox txtBoxDescripcionArticulo;
         private System.Windows.Forms.Label lblDescripcion;
+        private System.Windows.Forms.ListBox listBoxImgURL;
     }
 }
