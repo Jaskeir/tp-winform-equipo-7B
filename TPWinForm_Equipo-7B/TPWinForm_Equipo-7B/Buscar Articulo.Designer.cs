@@ -30,17 +30,17 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BUSQUEDA));
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtbCodigo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.cbxMarcas = new System.Windows.Forms.ComboBox();
+            this.cbxCategorias = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.txtbNombre = new System.Windows.Forms.TextBox();
+            this.dvgArticulos = new System.Windows.Forms.DataGridView();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dvgArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,13 +55,13 @@
             this.label1.Text = "CODIGO:";
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // textBox1
+            // txtbCodigo
             // 
-            this.textBox1.Location = new System.Drawing.Point(216, 46);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(380, 31);
-            this.textBox1.TabIndex = 1;
+            this.txtbCodigo.Location = new System.Drawing.Point(216, 46);
+            this.txtbCodigo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbCodigo.Name = "txtbCodigo";
+            this.txtbCodigo.Size = new System.Drawing.Size(380, 31);
+            this.txtbCodigo.TabIndex = 1;
             // 
             // label2
             // 
@@ -88,31 +88,32 @@
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(120, 331);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(324, 62);
             this.button1.TabIndex = 8;
             this.button1.Text = "BUSCAR";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // comboBox1
+            // cbxMarcas
             // 
-            this.comboBox1.Location = new System.Drawing.Point(216, 148);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(380, 33);
-            this.comboBox1.TabIndex = 9;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.cbxMarcas.Location = new System.Drawing.Point(216, 148);
+            this.cbxMarcas.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxMarcas.Name = "cbxMarcas";
+            this.cbxMarcas.Size = new System.Drawing.Size(380, 33);
+            this.cbxMarcas.TabIndex = 9;
+            this.cbxMarcas.SelectedIndexChanged += new System.EventHandler(this.BUSQUEDA_Load);
             // 
-            // comboBox2
+            // cbxCategorias
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(216, 198);
-            this.comboBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(380, 33);
-            this.comboBox2.TabIndex = 10;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.cbxCategorias.FormattingEnabled = true;
+            this.cbxCategorias.Location = new System.Drawing.Point(216, 198);
+            this.cbxCategorias.Margin = new System.Windows.Forms.Padding(4);
+            this.cbxCategorias.Name = "cbxCategorias";
+            this.cbxCategorias.Size = new System.Drawing.Size(380, 33);
+            this.cbxCategorias.TabIndex = 10;
+            this.cbxCategorias.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label4
             // 
@@ -125,29 +126,29 @@
             this.label4.Text = "NOMBRE:";
             this.label4.Click += new System.EventHandler(this.label4_Click_1);
             // 
-            // textBox2
+            // txtbNombre
             // 
-            this.textBox2.Location = new System.Drawing.Point(216, 98);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(380, 31);
-            this.textBox2.TabIndex = 14;
+            this.txtbNombre.Location = new System.Drawing.Point(216, 98);
+            this.txtbNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtbNombre.Name = "txtbNombre";
+            this.txtbNombre.Size = new System.Drawing.Size(380, 31);
+            this.txtbNombre.TabIndex = 14;
             // 
-            // dataGridView1
+            // dvgArticulos
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(62, 419);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 82;
-            this.dataGridView1.RowTemplate.Height = 33;
-            this.dataGridView1.Size = new System.Drawing.Size(576, 244);
-            this.dataGridView1.TabIndex = 15;
+            this.dvgArticulos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dvgArticulos.Location = new System.Drawing.Point(62, 419);
+            this.dvgArticulos.Margin = new System.Windows.Forms.Padding(4);
+            this.dvgArticulos.Name = "dvgArticulos";
+            this.dvgArticulos.RowHeadersWidth = 82;
+            this.dvgArticulos.RowTemplate.Height = 33;
+            this.dvgArticulos.Size = new System.Drawing.Size(576, 244);
+            this.dvgArticulos.TabIndex = 15;
             // 
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(680, 419);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(236, 242);
             this.pictureBox1.TabIndex = 16;
@@ -159,21 +160,22 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 699);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.dvgArticulos);
+            this.Controls.Add(this.txtbNombre);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cbxCategorias);
+            this.Controls.Add(this.cbxMarcas);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtbCodigo);
             this.Controls.Add(this.label1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "BUSQUEDA";
             this.Text = "BUSQUEDA DE ARTICULOS";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.BUSQUEDA_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dvgArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,15 +185,15 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtbCodigo;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbxMarcas;
+        private System.Windows.Forms.ComboBox cbxCategorias;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox txtbNombre;
+        private System.Windows.Forms.DataGridView dvgArticulos;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

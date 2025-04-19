@@ -53,5 +53,12 @@ namespace TPWinForm_Equipo_7B
 
             ventanaAddArticulo.ShowDialog();
         }
+        ///
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BUSQUEDA Vbuscar = new BUSQUEDA();
+
+            Vbuscar.ShowDialog();
+        }
     }
 }
