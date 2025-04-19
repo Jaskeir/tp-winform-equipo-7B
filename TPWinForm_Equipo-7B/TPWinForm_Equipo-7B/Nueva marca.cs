@@ -41,7 +41,7 @@ namespace TPWinForm_Equipo_7B
             try
             {
                 marca.Nombre = txtNombre.Text;
-                if (txtNombre.Text != "" && txtNombre.Text.Length >= 2 && !val.soloNumeros(txtNombre.Text))
+                if (txtNombre.Text != "" && txtNombre.Text.Trim().Length >= 2 && !val.soloNumeros(txtNombre.Text.Trim()))
                     {
 
                     nueva.agregar(marca);
@@ -60,6 +60,7 @@ namespace TPWinForm_Equipo_7B
             {
                 MessageBox.Show(ex.ToString());
             }
+            
         }
         
     

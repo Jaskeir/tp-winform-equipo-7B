@@ -39,11 +39,12 @@ namespace TPWinForm_Equipo_7B
             }
         }
 
-        private void MODIFICARCATLOGO_Click(object sender, EventArgs e)
+        private void NUEVAMARCA_Click(object sender, EventArgs e)
         {
             NUEVA_MARCA nMARCA = new NUEVA_MARCA();
 
             nMARCA.ShowDialog();
+            cargarMarcas();
         }
 
         private void button2_Click(object sender, EventArgs e)
