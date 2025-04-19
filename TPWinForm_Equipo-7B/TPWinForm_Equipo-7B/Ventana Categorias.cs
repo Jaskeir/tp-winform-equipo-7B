@@ -13,6 +13,7 @@ namespace TPWinForm_Equipo_7B
 {
     public partial class vCategorias : Form
     {
+        private List<Categoria> listaCategoria;
         public vCategorias()
         {
             InitializeComponent();
@@ -36,7 +37,8 @@ namespace TPWinForm_Equipo_7B
             ManagerCategorias managerCate = new ManagerCategorias();
             try
             {
-                dataGridViewCategorias.DataSource = managerCate.Listar();
+                listaCategoria = managerCate.Listar();
+                dataGridViewCategorias.DataSource = listaCategoria;
             }
             catch (Exception ex)
             {
@@ -83,6 +85,25 @@ namespace TPWinForm_Equipo_7B
             
               
             
+        }
+
+        private void btnBuscarCate_Click(object sender, EventArgs e)
+        {
+            List<Categoria> ListaFiltrada;
+            string filtro = txtBoxBuscarCate.Text;
+            
+            if(filtro != "")
+            {
+                ListaFiltrada = listaCategoria.FindAll(x => x.Nombre.ToUpper().Contains(txtBoxBuscarCate.Text.ToUpper()));
+            } else
+            {
+                ListaFiltrada = listaCategoria;
+            }
+            
+
+            dataGridViewCategorias.DataSource = null;
+
+            dataGridViewCategorias.DataSource = ListaFiltrada;
         }
     }
 }

@@ -33,6 +33,9 @@ namespace TPWinForm_Equipo_7B
             this.btnAgregarCate = new System.Windows.Forms.Button();
             this.btnModificarCate = new System.Windows.Forms.Button();
             this.btnEliminarCate = new System.Windows.Forms.Button();
+            this.lblBuscarCate = new System.Windows.Forms.Label();
+            this.txtBoxBuscarCate = new System.Windows.Forms.TextBox();
+            this.btnBuscarCate = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -40,9 +43,10 @@ namespace TPWinForm_Equipo_7B
             // 
             this.dataGridViewCategorias.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridViewCategorias.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridViewCategorias.Location = new System.Drawing.Point(12, 25);
+            this.dataGridViewCategorias.Location = new System.Drawing.Point(12, 43);
             this.dataGridViewCategorias.MultiSelect = false;
             this.dataGridViewCategorias.Name = "dataGridViewCategorias";
+            this.dataGridViewCategorias.RowHeadersVisible = false;
             this.dataGridViewCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCategorias.Size = new System.Drawing.Size(272, 196);
             this.dataGridViewCategorias.TabIndex = 0;
@@ -86,12 +90,41 @@ namespace TPWinForm_Equipo_7B
             this.btnEliminarCate.UseVisualStyleBackColor = false;
             this.btnEliminarCate.Click += new System.EventHandler(this.btnEliminarCate_Click);
             // 
+            // lblBuscarCate
+            // 
+            this.lblBuscarCate.AutoSize = true;
+            this.lblBuscarCate.Location = new System.Drawing.Point(12, 15);
+            this.lblBuscarCate.Name = "lblBuscarCate";
+            this.lblBuscarCate.Size = new System.Drawing.Size(63, 13);
+            this.lblBuscarCate.TabIndex = 4;
+            this.lblBuscarCate.Text = "Descripcion";
+            // 
+            // txtBoxBuscarCate
+            // 
+            this.txtBoxBuscarCate.Location = new System.Drawing.Point(81, 12);
+            this.txtBoxBuscarCate.Name = "txtBoxBuscarCate";
+            this.txtBoxBuscarCate.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxBuscarCate.TabIndex = 5;
+            // 
+            // btnBuscarCate
+            // 
+            this.btnBuscarCate.Location = new System.Drawing.Point(189, 10);
+            this.btnBuscarCate.Name = "btnBuscarCate";
+            this.btnBuscarCate.Size = new System.Drawing.Size(75, 23);
+            this.btnBuscarCate.TabIndex = 6;
+            this.btnBuscarCate.Text = "Buscar";
+            this.btnBuscarCate.UseVisualStyleBackColor = true;
+            this.btnBuscarCate.Click += new System.EventHandler(this.btnBuscarCate_Click);
+            // 
             // vCategorias
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(337, 298);
+            this.ClientSize = new System.Drawing.Size(410, 298);
+            this.Controls.Add(this.btnBuscarCate);
+            this.Controls.Add(this.txtBoxBuscarCate);
+            this.Controls.Add(this.lblBuscarCate);
             this.Controls.Add(this.btnEliminarCate);
             this.Controls.Add(this.btnModificarCate);
             this.Controls.Add(this.btnAgregarCate);
@@ -101,6 +134,7 @@ namespace TPWinForm_Equipo_7B
             this.Load += new System.EventHandler(this.vCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -110,5 +144,8 @@ namespace TPWinForm_Equipo_7B
         private System.Windows.Forms.Button btnAgregarCate;
         private System.Windows.Forms.Button btnModificarCate;
         private System.Windows.Forms.Button btnEliminarCate;
+        private System.Windows.Forms.Label lblBuscarCate;
+        private System.Windows.Forms.TextBox txtBoxBuscarCate;
+        private System.Windows.Forms.Button btnBuscarCate;
     }
 }
