@@ -14,6 +14,7 @@ namespace TPWinForm_Equipo_7B
 {
     public partial class G_MARCA : Form
     {
+        private List<Marca> marcas;
         public G_MARCA()
         {
             InitializeComponent();
@@ -21,21 +22,21 @@ namespace TPWinForm_Equipo_7B
 
         private void MARCAS_Load(object sender, EventArgs e)
         {
+            cargarMarcas();
+        }
+
+        private void cargarMarcas()
+        {
             Admin_Marca marca = new Admin_Marca();
             try
             {
-               dgvMarcas.DataSource = marca.Listar();
+                marcas = marca.Listar();
+                dgvMarcas.DataSource = marcas;
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.ToString());
             }
-        }
-
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void MODIFICARCATLOGO_Click(object sender, EventArgs e)
@@ -65,7 +66,7 @@ namespace TPWinForm_Equipo_7B
                     MessageBox.Show(ex.ToString());
                 }
             }
-            
+            cargarMarcas();
         }
     }
 
