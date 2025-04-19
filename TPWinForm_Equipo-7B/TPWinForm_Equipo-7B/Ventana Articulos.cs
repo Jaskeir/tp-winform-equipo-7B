@@ -49,6 +49,9 @@ namespace TPWinForm_Equipo_7B
         private void btnAddArticulo_Click(object sender, EventArgs e)
         {
             // abrir nueva ventana
+            addArticle ventanaAddArticulo = new addArticle();
+
+            ventanaAddArticulo.ShowDialog();
         }
     }
 }

@@ -43,6 +43,7 @@ namespace TPWinForm_Equipo_7B
             this.dataGridViewCategorias.Location = new System.Drawing.Point(12, 25);
             this.dataGridViewCategorias.MultiSelect = false;
             this.dataGridViewCategorias.Name = "dataGridViewCategorias";
+            this.dataGridViewCategorias.RowHeadersVisible = false;
             this.dataGridViewCategorias.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridViewCategorias.Size = new System.Drawing.Size(272, 196);
             this.dataGridViewCategorias.TabIndex = 0;
@@ -91,12 +92,13 @@ namespace TPWinForm_Equipo_7B
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(337, 298);
+            this.ClientSize = new System.Drawing.Size(298, 298);
             this.Controls.Add(this.btnEliminarCate);
             this.Controls.Add(this.btnModificarCate);
             this.Controls.Add(this.btnAgregarCate);
             this.Controls.Add(this.dataGridViewCategorias);
             this.Name = "vCategorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.vCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).EndInit();
