@@ -87,6 +87,7 @@ namespace TPWinForm_Equipo_7B
             this.Controls.Add(this.btnCancelarCate);
             this.Controls.Add(this.btnAceptarCate);
             this.Name = "FormNuevaCategoria";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";
             this.Load += new System.EventHandler(this.FormNuevaCategoria_Load);
             this.ResumeLayout(false);

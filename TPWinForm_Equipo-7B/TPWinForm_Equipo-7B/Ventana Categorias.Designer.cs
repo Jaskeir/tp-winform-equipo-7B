@@ -121,15 +121,13 @@ namespace TPWinForm_Equipo_7B
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(410, 298);
-            this.Controls.Add(this.btnBuscarCate);
-            this.Controls.Add(this.txtBoxBuscarCate);
-            this.Controls.Add(this.lblBuscarCate);
+            this.ClientSize = new System.Drawing.Size(337, 298);
             this.Controls.Add(this.btnEliminarCate);
             this.Controls.Add(this.btnModificarCate);
             this.Controls.Add(this.btnAgregarCate);
             this.Controls.Add(this.dataGridViewCategorias);
             this.Name = "vCategorias";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Categorias";
             this.Load += new System.EventHandler(this.vCategorias_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).EndInit();

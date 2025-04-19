@@ -20,18 +20,22 @@ namespace dominio
 
         public bool link(string txt)
         {
+            if (txt == "")
+                return false;
+            else if (txt.Length < 5)
+                return false;
+
             string URL = "HTTP";
             string aux = txt.ToUpper();
            
-                for (int i = 0; i <= 3; i++)
-                {
-                    if (URL[i] != aux[i])
+            for (int i = 0; i <= 3; i++)
+            {
+                if (URL[i] != aux[i])
                     return false;
-                }
+            }
             
             return true;
         }
-
 
     }
 }

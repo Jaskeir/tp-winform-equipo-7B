@@ -32,7 +32,7 @@ namespace TPWinForm_Equipo_7B
 
         private void CATALOGO_Load(object sender, EventArgs e)
         {
-            ManagerArticulo datos = new ManagerArticulo();
+            articulosDatos datos = new articulosDatos();
             listaArticulos = datos.Listar();
             dataGridView1.DataSource = listaArticulos;
         }
@@ -44,6 +44,21 @@ namespace TPWinForm_Equipo_7B
 
             frmImages.Text = "Imagenes de " + listaArticulos[e.RowIndex].Nombre;
             frmImages.ShowDialog();
+        }
+
+        private void btnAddArticulo_Click(object sender, EventArgs e)
+        {
+            // abrir nueva ventana
+            addArticle ventanaAddArticulo = new addArticle();
+
+            ventanaAddArticulo.ShowDialog();
+        }
+        ///
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            BUSQUEDA Vbuscar = new BUSQUEDA();
+
+            Vbuscar.ShowDialog();
         }
     }
 }
