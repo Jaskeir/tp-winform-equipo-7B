@@ -19,7 +19,7 @@ namespace dominio
 
             try
             {
-                ConsultaDatabaseArticulos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria FROM Articulos A INNER JOIN Marcas M ON A.Id = M.Id INNER JOIN Categorias C ON A.Id = C.Id");
+                ConsultaDatabaseArticulos.setearConsulta("SELECT A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion AS Marca, C.Descripcion AS Categoria, Precio FROM Articulos A INNER JOIN Marcas M ON A.Id = M.Id INNER JOIN Categorias C ON A.Id = C.Id");
                 ConsultaDatabaseArticulos.ejecutarLectura();
 
                 Admin_Datos consultaDatabaseImagenes = new Admin_Datos();
@@ -36,6 +36,7 @@ namespace dominio
                     articulo.Categoria = new Categoria();
                     articulo.Categoria.Nombre = (string)ConsultaDatabaseArticulos.Lector["Categoria"];
                     articulo.Imagenes = new List<Imagen>();
+                    articulo.Precio = Math.Round((decimal)ConsultaDatabaseArticulos.Lector["Precio"], 2); // Casteo a decimal y redondeo a 2 decimales, no es posible castear a float o int, porque el el SQL está declarado como MONEY
 
                     try
                     {
