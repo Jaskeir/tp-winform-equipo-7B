@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
-using ConexionDB;
 using System.Reflection;
+using ConexionDB;
+using dominio;
 
 namespace dominio
 {
-    public class ManagerArticulo
+    public class articulosDatos
     {
         public List<Articulo> Listar()
         {

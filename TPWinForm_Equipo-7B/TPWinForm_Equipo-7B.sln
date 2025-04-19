@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dominio", "dominio\dominio.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConexionDB", "ConexionDB\ConexionDB.csproj", "{3CE08DC6-E801-4279-9C6C-B0A8D3BBEE86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datos", "datos\datos.csproj", "{893EEDC0-95C1-4023-8F91-4D730E0A7EE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3CE08DC6-E801-4279-9C6C-B0A8D3BBEE86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3CE08DC6-E801-4279-9C6C-B0A8D3BBEE86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3CE08DC6-E801-4279-9C6C-B0A8D3BBEE86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{893EEDC0-95C1-4023-8F91-4D730E0A7EE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{893EEDC0-95C1-4023-8F91-4D730E0A7EE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{893EEDC0-95C1-4023-8F91-4D730E0A7EE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{893EEDC0-95C1-4023-8F91-4D730E0A7EE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

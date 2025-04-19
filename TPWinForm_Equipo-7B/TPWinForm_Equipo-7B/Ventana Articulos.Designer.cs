@@ -91,6 +91,7 @@
             this.btnAddArticulo.TabIndex = 4;
             this.btnAddArticulo.Text = "Añadir Articulo";
             this.btnAddArticulo.UseVisualStyleBackColor = true;
+            this.btnAddArticulo.Click += new System.EventHandler(this.btnAddArticulo_Click);
             // 
             // ventanaArticulos
             // 

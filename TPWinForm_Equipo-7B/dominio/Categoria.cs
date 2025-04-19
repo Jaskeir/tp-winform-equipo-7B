@@ -15,7 +15,6 @@ namespace dominio
         public override string ToString()
         {
             return Nombre;  // EN BD ESTA COMO DESCRIPCION
-
         }
     }
 }

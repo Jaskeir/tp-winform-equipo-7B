@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3CE08DC6-E801-4279-9C6C-B0A8D3BBEE86}</ProjectGuid>
+    <ProjectGuid>{893EEDC0-95C1-4023-8F91-4D730E0A7EE5}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ConexionDB</RootNamespace>
-    <AssemblyName>ConexionDB</AssemblyName>
+    <RootNamespace>datos</RootNamespace>
+    <AssemblyName>datos</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,10 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_datos.cs" />
+    <Compile Include="Admin_Marca.cs" />
+    <Compile Include="articulosDatos.cs" />
+    <Compile Include="ManagerCategorias.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ConexionDB\ConexionDB.csproj">
+      <Project>{3ce08dc6-e801-4279-9c6c-b0a8d3bbee86}</Project>
+      <Name>ConexionDB</Name>
+    </ProjectReference>
     <ProjectReference Include="..\dominio\dominio.csproj">
       <Project>{4998e45f-58cf-41e0-ac79-0afee5902ed3}</Project>
       <Name>dominio</Name>

@@ -41,21 +41,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Admin_Marca.cs" />
     <Compile Include="Articulo.cs" />
     <Compile Include="Categoria.cs" />
     <Compile Include="Validaciones.cs" />
     <Compile Include="Imagen.cs" />
-    <Compile Include="ManagerArticulo.cs" />
-    <Compile Include="ManagerCategorias.cs" />
     <Compile Include="Marca.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\ConexionDB\ConexionDB.csproj">
-      <Project>{3ce08dc6-e801-4279-9c6c-b0a8d3bbee86}</Project>
-      <Name>ConexionDB</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
