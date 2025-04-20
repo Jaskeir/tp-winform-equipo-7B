@@ -58,7 +58,8 @@ namespace dominio
             Admin_Datos datos = new Admin_Datos();
             try
             {
-                datos.setearConsulta("Insert into Categorias(Descripcion)values('" + nueva.Nombre + "')");
+                datos.setearConsulta("Insert into Categorias (Descripcion) values(@desc)");
+                datos.setearParametro("@desc", nueva.Nombre);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)

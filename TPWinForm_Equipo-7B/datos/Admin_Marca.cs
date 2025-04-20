@@ -54,8 +54,8 @@ namespace ConexionDB
 
             try
             {
-                datos.setearConsulta("Insert into MARCAS (Descripcion)values('" + nuevo.Nombre + "')");
-                
+                datos.setearConsulta("Insert into MARCAS (Descripcion) values(@desc)");
+                datos.setearParametro("@desc", nuevo.Nombre);
                 datos.ejecutarAccion();
             }
             catch (Exception ex)
