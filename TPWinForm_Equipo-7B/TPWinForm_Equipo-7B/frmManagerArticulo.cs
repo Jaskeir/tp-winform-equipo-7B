@@ -13,14 +13,30 @@ using System.Windows.Forms;
 
 namespace TPWinForm_Equipo_7B
 {
-    public partial class addArticle : Form
+    public partial class frmManagerArticulo : Form
     {
         private List<Marca> marcas;
         private List<Categoria> categorias;
         private List<Imagen> imagenes = new List<Imagen>();
-        public addArticle()
+        private Articulo articulo;
+        private bool newArticle = false;
+        private List<Imagen> oldImgCache; // Para poder comparar cuales son las URL a añadir / eliminar al finalizar la modificacion de un artículo
+        public frmManagerArticulo(Articulo articuloModificando) // Constructor para abrir el frm en modo modificar
         {
             InitializeComponent();
+            Text = "Modificar Artículo";
+            btnAceptar.Text = "Modificar Artículo";
+            articulo = articuloModificando;
+            newArticle = false;
+            oldImgCache = articuloModificando.Imagenes;
+        }
+
+        public frmManagerArticulo() // Constructor para abrir el frm en modo nuevo articulo
+        {
+            InitializeComponent();
+            Text = "Agregar Artículo";
+            newArticle = true;
+            btnAceptar.Text = "Agregar Artículo";
         }
 
         private void loadCategoriasOnComboBox()
@@ -43,13 +59,27 @@ namespace TPWinForm_Equipo_7B
         {
             loadCategoriasOnComboBox();
             loadMarcasOnComboBox();
+
+            if (!newArticle) // Está en modo modificacion
+            {
+                txtBoxNombreArticulo.Text = articulo.Nombre;
+                txtBoxDescripcionArticulo.Text = articulo.Descripcion;
+                txtBoxPrecioArticulo.Text = articulo.Precio.ToString();
+                comboBoxMarca.SelectedItem = articulo.Marca;
+                comboBoxCategoria.SelectedItem = articulo.Categoria;
+                foreach (Imagen img in articulo.Imagenes)
+                {
+                    imagenes.Add(img);
+                }
+                printImagesToListBox();
+            }
         }
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
             articulosDatos manager = new articulosDatos();
             Validaciones val = new Validaciones();
-            Articulo articulo = new Articulo();
+
             string nombre = txtBoxNombreArticulo.Text;
             string descripcion = txtBoxDescripcionArticulo.Text;
             Marca marca = (Marca)comboBoxMarca.SelectedItem;
@@ -76,17 +106,23 @@ namespace TPWinForm_Equipo_7B
                 MessageBox.Show("Debes ingresar un valor válido de precio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 return;
             }
-            
+
             articulo.Nombre = nombre;
             articulo.Descripcion = descripcion;
             articulo.Marca = marca;
             articulo.Categoria = categoria;
             articulo.Precio = decimal.Parse(precio);
             articulo.Imagenes = imagenes;
-            articulo.Codigo = generateCode(marca.Nombre);
-
-            manager.addArticle(articulo);
-
+            Console.WriteLine(newArticle);
+            if (newArticle)
+            {
+                
+                articulo.Codigo = generateCode(marca.Nombre);
+                manager.addArticle(articulo);
+            } else
+            {
+                manager.updateArticle(articulo, oldImgCache);
+            }
             Close();
         }
 

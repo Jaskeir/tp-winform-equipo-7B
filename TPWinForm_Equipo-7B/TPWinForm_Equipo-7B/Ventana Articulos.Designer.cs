@@ -69,7 +69,6 @@
             this.btnEliminarArticulo.TabIndex = 4;
             this.btnEliminarArticulo.Text = "Eliminar Articulo";
             this.btnEliminarArticulo.UseVisualStyleBackColor = true;
-            this.btnEliminarArticulo.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnModificarArticulo
             // 
@@ -79,6 +78,7 @@
             this.btnModificarArticulo.TabIndex = 0;
             this.btnModificarArticulo.Text = "Modificar Artículo";
             this.btnModificarArticulo.UseVisualStyleBackColor = true;
+            this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
             // 
             // btnVerDetallesArticulo
             // 
@@ -88,7 +88,6 @@
             this.btnVerDetallesArticulo.TabIndex = 1;
             this.btnVerDetallesArticulo.Text = "Ver Detalles";
             this.btnVerDetallesArticulo.UseVisualStyleBackColor = true;
-            this.btnVerDetallesArticulo.Click += new System.EventHandler(this.btn_Click);
             // 
             // btnAddArticulo
             // 
@@ -123,7 +122,7 @@
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.dataGridView1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "ventanaArticulos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ventanaArticulos";

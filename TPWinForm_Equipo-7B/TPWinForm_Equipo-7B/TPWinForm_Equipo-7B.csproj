@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="addArticle.cs">
+    <Compile Include="frmManagerArticulo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="addArticle.Designer.cs">
-      <DependentUpon>addArticle.cs</DependentUpon>
+    <Compile Include="frmManagerArticulo.Designer.cs">
+      <DependentUpon>frmManagerArticulo.cs</DependentUpon>
     </Compile>
     <Compile Include="Nueva marca.cs">
       <SubType>Form</SubType>
@@ -102,8 +102,8 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="addArticle.resx">
-      <DependentUpon>addArticle.cs</DependentUpon>
+    <EmbeddedResource Include="frmManagerArticulo.resx">
+      <DependentUpon>frmManagerArticulo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Ventana Inicial.resx">
       <DependentUpon>Ventana Inicial.cs</DependentUpon>

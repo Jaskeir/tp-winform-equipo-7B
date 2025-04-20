@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using dominio;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace TPWinForm_Equipo_7B
 {
@@ -18,16 +19,6 @@ namespace TPWinForm_Equipo_7B
         public ventanaArticulos()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void CATALOGO_Load(object sender, EventArgs e)
@@ -54,8 +45,14 @@ namespace TPWinForm_Equipo_7B
 
         private void btnAddArticulo_Click(object sender, EventArgs e)
         {
-            // abrir nueva ventana
-            addArticle ventanaAddArticulo = new addArticle();
+            frmManagerArticulo ventanaAddArticulo = new frmManagerArticulo();
+
+            ventanaAddArticulo.ShowDialog();
+            cargarArticulos();
+        }
+        private void btnModificarArticulo_Click(object sender, EventArgs e)
+        {
+            frmManagerArticulo ventanaAddArticulo = new frmManagerArticulo((Articulo)dataGridView1.CurrentRow.DataBoundItem);
 
             ventanaAddArticulo.ShowDialog();
             cargarArticulos();
@@ -67,5 +64,7 @@ namespace TPWinForm_Equipo_7B
 
             Vbuscar.ShowDialog();
         }
+
+        
     }
 }

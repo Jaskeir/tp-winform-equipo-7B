@@ -1,6 +1,6 @@
 ﻿namespace TPWinForm_Equipo_7B
 {
-    partial class addArticle
+    partial class frmManagerArticulo
     {
         /// <summary>
         /// Required designer variable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addArticle));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManagerArticulo));
             this.lblNombreArticulo = new System.Windows.Forms.Label();
             this.txtBoxNombreArticulo = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();

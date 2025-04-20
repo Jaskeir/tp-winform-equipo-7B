@@ -29,13 +29,14 @@ namespace dominio
                 while (ConsultaDatabaseArticulos.Lector.Read())
                 {
                     Articulo articulo = new Articulo();
+                    articulo.Id = (int)ConsultaDatabaseArticulos.Lector["Id"];
                     articulo.Codigo = (string)ConsultaDatabaseArticulos.Lector["Codigo"];
                     articulo.Nombre = (string)ConsultaDatabaseArticulos.Lector["Nombre"];
                     articulo.Descripcion = (string)ConsultaDatabaseArticulos.Lector["Descripcion"];
                     articulo.Marca.Nombre = (string)ConsultaDatabaseArticulos.Lector["Marca"];
                     articulo.Categoria.Nombre = (string)ConsultaDatabaseArticulos.Lector["Categoria"];
                     articulo.Precio = Math.Round((decimal)ConsultaDatabaseArticulos.Lector["Precio"], 2); // Casteo a decimal y redondeo a 2 decimales, no es posible castear a float o int, porque el el SQL está declarado como MONEY
-                    articulo.Imagenes = imagenesDatos.Listar((int)ConsultaDatabaseArticulos.Lector["Id"]);
+                    articulo.Imagenes = imagenesDatos.Listar(articulo.Id);
 
                     lista.Add(articulo);
                 }
@@ -50,6 +51,38 @@ namespace dominio
                 ConsultaDatabaseArticulos.cerrarConexion();
             }
             return lista;
+        }
+
+        public bool updateArticle(Articulo articulo, List<Imagen> oldImgCache)
+        {
+            Admin_Datos databaseArticulos = new Admin_Datos();
+            imagenesDatos imagenManager = new imagenesDatos();
+            try
+            {
+                Console.WriteLine("Actualizando " + articulo.Id);
+                databaseArticulos.setearConsulta("UPDATE Articulos SET Nombre = @nombre, Descripcion = @descripcion, IdMarca = @idMarca, IdCategoria = @idCategoria, Precio = @precio WHERE Id = @id");
+                databaseArticulos.setearParametro("@id", articulo.Id);
+                databaseArticulos.setearParametro("@codigo", articulo.Codigo);
+                databaseArticulos.setearParametro("@nombre", articulo.Nombre);
+                databaseArticulos.setearParametro("@descripcion", articulo.Descripcion);
+                databaseArticulos.setearParametro("@idMarca", articulo.Marca.Id);
+                databaseArticulos.setearParametro("@idCategoria", articulo.Categoria.Id);
+                databaseArticulos.setearParametro("@precio", articulo.Precio);
+                databaseArticulos.ejecutarAccion();
+
+                imagenManager.updateImages(articulo, oldImgCache);
+
+                MessageBox.Show("Artículo actualizado", "Actualizar artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                databaseArticulos.cerrarConexion();
+            }
         }
 
         public bool addArticle(Articulo articulo)
