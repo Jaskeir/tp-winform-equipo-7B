@@ -84,8 +84,7 @@ namespace TPWinForm_Equipo_7B
         }
 
 
-
-        private void BtnBuscarCate_Click(object sender, EventArgs e)
+        private void txtBoxBuscarCate_TextChanged(object sender, EventArgs e)
         {
             List<Categoria> ListaFiltrada;
             string filtro = txtBoxBuscarCate.Text;
