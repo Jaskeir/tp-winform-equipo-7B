@@ -73,10 +73,7 @@ namespace TPWinForm_Equipo_7B
                     MessageBox.Show( "Registro eliminado");
                     cargarCategorias();
                 } 
-                
-                    
-                
-               
+
             }
             catch (Exception ex)
             {
@@ -84,23 +81,24 @@ namespace TPWinForm_Equipo_7B
                 MessageBox.Show(ex.ToString());
             }
             
-              
-            
         }
 
-        private void btnBuscarCate_Click(object sender, EventArgs e)
+
+
+        private void BtnBuscarCate_Click(object sender, EventArgs e)
         {
             List<Categoria> ListaFiltrada;
             string filtro = txtBoxBuscarCate.Text;
-            
-            if(filtro != "")
+
+            if (filtro != "")
             {
                 ListaFiltrada = listaCategoria.FindAll(x => x.Nombre.ToUpper().Contains(txtBoxBuscarCate.Text.ToUpper()));
-            } else
+            }
+            else
             {
                 ListaFiltrada = listaCategoria;
             }
-            
+
 
             dataGridViewCategorias.DataSource = null;
 
