@@ -43,9 +43,27 @@ namespace TPWinForm_Equipo_7B
                 {
                     categoria = new Categoria();
                 }
+
                 categoria.Nombre = txtBoxAgregarCate.Text;
 
-                if(categoria.Id!=0)
+
+                // VALIDAR IGUALES 
+
+                List<Categoria> listaActual = manager.Listar();
+
+                foreach (Categoria cate in listaActual)
+                {
+                    if(categoria.Nombre.ToUpper() == cate.Nombre.ToUpper() && categoria.Id != cate.Id)
+                    {
+                        MessageBox.Show("Esa categoria ya esta ingresada");
+                        return;
+                    }
+                }
+
+                // FIN VALIDAR IGUALES
+                
+
+                if (categoria.Id != 0)
                 {
                     manager.modificarCategoria(categoria);
                     MessageBox.Show("Modificado exitosamente");

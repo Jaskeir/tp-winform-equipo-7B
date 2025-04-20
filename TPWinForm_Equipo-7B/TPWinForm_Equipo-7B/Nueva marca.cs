@@ -62,7 +62,7 @@ namespace TPWinForm_Equipo_7B
             }
             
         }
-        
-    
+
+       
     }
 }
