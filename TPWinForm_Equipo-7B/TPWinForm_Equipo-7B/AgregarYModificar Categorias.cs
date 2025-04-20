@@ -36,6 +36,7 @@ namespace TPWinForm_Equipo_7B
         {
             
             ManagerCategorias manager = new ManagerCategorias();
+            Validaciones val = new Validaciones();
 
             try
             {
@@ -61,7 +62,12 @@ namespace TPWinForm_Equipo_7B
                 }
 
                 // FIN VALIDAR IGUALES
-                
+
+                if (txtBoxAgregarCate.Text == "" || txtBoxAgregarCate.Text.Trim().Length < 2 || val.soloNumeros(txtBoxAgregarCate.Text.Trim()))
+                {
+                    MessageBox.Show("No se pudo crear la categoria. Ingrese un nombre con al menos dos caracteres, uno de los cuales debe ser una letra");
+                    return;
+                }
 
                 if (categoria.Id != 0)
                 {

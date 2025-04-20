@@ -37,10 +37,26 @@ namespace TPWinForm_Equipo_7B
             Marca marca = new Marca();
             Admin_Marca nueva = new Admin_Marca();
             Validaciones val = new Validaciones();
+            List<Marca> listaMarcas;
 
             try
             {
                 marca.Nombre = txtNombre.Text;
+
+                // VALIDAR IGUALES 
+                listaMarcas = nueva.Listar();
+
+                foreach (Marca item in listaMarcas)
+                {
+                    if(marca.Nombre == item.Nombre)
+                    {
+                        MessageBox.Show("Esa marca ya esta registrada");
+                        return;
+                    }
+                }
+
+                // FIN VALIDAR IGUALES 
+
                 if (txtNombre.Text != "" && txtNombre.Text.Trim().Length >= 2 && !val.soloNumeros(txtNombre.Text.Trim()))
                     {
 

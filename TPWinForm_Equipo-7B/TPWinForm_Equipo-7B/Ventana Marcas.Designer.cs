@@ -37,27 +37,29 @@
             // 
             // dgvMarcas
             // 
+            this.dgvMarcas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMarcas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMarcas.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dgvMarcas.Location = new System.Drawing.Point(72, 83);
-            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvMarcas.Location = new System.Drawing.Point(36, 43);
+            this.dgvMarcas.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.dgvMarcas.MultiSelect = false;
             this.dgvMarcas.Name = "dgvMarcas";
             this.dgvMarcas.RowHeadersVisible = false;
             this.dgvMarcas.RowHeadersWidth = 82;
             this.dgvMarcas.RowTemplate.Height = 33;
             this.dgvMarcas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvMarcas.Size = new System.Drawing.Size(654, 285);
+            this.dgvMarcas.Size = new System.Drawing.Size(327, 148);
             this.dgvMarcas.TabIndex = 3;
             // 
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.button2.Location = new System.Drawing.Point(434, 406);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.button2.Location = new System.Drawing.Point(217, 211);
+            this.button2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(292, 69);
+            this.button2.Size = new System.Drawing.Size(146, 36);
             this.button2.TabIndex = 7;
             this.button2.Text = "ELIMINAR MARCA";
             this.button2.UseVisualStyleBackColor = false;
@@ -66,11 +68,12 @@
             // btnNuevaMarca
             // 
             this.btnNuevaMarca.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btnNuevaMarca.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnNuevaMarca.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold);
-            this.btnNuevaMarca.Location = new System.Drawing.Point(72, 406);
-            this.btnNuevaMarca.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevaMarca.Location = new System.Drawing.Point(36, 211);
+            this.btnNuevaMarca.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnNuevaMarca.Name = "btnNuevaMarca";
-            this.btnNuevaMarca.Size = new System.Drawing.Size(276, 69);
+            this.btnNuevaMarca.Size = new System.Drawing.Size(138, 36);
             this.btnNuevaMarca.TabIndex = 6;
             this.btnNuevaMarca.Text = "NUEVA MARCA";
             this.btnNuevaMarca.UseVisualStyleBackColor = false;
@@ -78,14 +81,16 @@
             // 
             // G_MARCA
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 487);
+            this.ClientSize = new System.Drawing.Size(405, 253);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btnNuevaMarca);
             this.Controls.Add(this.dgvMarcas);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaximumSize = new System.Drawing.Size(421, 292);
+            this.MinimumSize = new System.Drawing.Size(421, 292);
             this.Name = "G_MARCA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GESTION DE MARCAS";
