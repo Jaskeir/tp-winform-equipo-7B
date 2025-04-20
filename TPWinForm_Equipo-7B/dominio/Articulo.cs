@@ -20,6 +20,8 @@ namespace dominio
         public Articulo()
         {
             Imagenes = new List<Imagen>();
+            Marca = new Marca();
+            Categoria = new Categoria();
         }
 
     }

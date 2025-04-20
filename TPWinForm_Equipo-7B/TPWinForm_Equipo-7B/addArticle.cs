@@ -1,6 +1,7 @@
 ﻿using ConexionDB;
 using dominio;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -46,13 +47,74 @@ namespace TPWinForm_Equipo_7B
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            articulosDatos manager = new articulosDatos();
+            Validaciones val = new Validaciones();
             Articulo articulo = new Articulo();
-            articulo.Nombre = txtBoxNombreArticulo.Text;
-            articulo.Descripcion = txtBoxDescripcionArticulo.Text;
-            articulo.Marca = (Marca)comboBoxMarca.SelectedItem;
-            articulo.Categoria = (Categoria)comboBoxCategoria.SelectedItem;
-            articulo.Precio = decimal.Parse(txtBoxPrecioArticulo.Text);
+            string nombre = txtBoxNombreArticulo.Text;
+            string descripcion = txtBoxDescripcionArticulo.Text;
+            Marca marca = (Marca)comboBoxMarca.SelectedItem;
+            Categoria categoria = (Categoria)comboBoxCategoria.SelectedItem;
+            string precio = txtBoxPrecioArticulo.Text;
+
+            if (nombre == "")
+            {
+                MessageBox.Show("Debes indicar un nombre para el artículo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (precio == "")
+            {
+                MessageBox.Show("Debes indicar un precio para el artículo", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (!val.soloNumeros(precio))
+            {
+                MessageBox.Show("El precio no puede contener letras", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            if (decimal.Parse(precio) < 0)
+            {
+                MessageBox.Show("Debes ingresar un valor válido de precio", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+            
+            articulo.Nombre = nombre;
+            articulo.Descripcion = descripcion;
+            articulo.Marca = marca;
+            articulo.Categoria = categoria;
+            articulo.Precio = decimal.Parse(precio);
             articulo.Imagenes = imagenes;
+            articulo.Codigo = generateCode(marca.Nombre);
+
+            manager.addArticle(articulo);
+
+            Close();
+        }
+
+        private string generateCode(string marca)
+        {
+            string inicialMarca = marca.Substring(0, 1).ToUpper();
+            int codigoMarca = 1;
+            List<int> codigosExistentes = new List<int>();
+
+            Admin_Datos database = new Admin_Datos();
+            database.setearConsulta("SELECT Codigo FROM Articulos WHERE Codigo LIKE @codigo");
+            database.setearParametro("@codigo", inicialMarca + "%");
+            database.ejecutarLectura();
+
+            while (database.Lector.Read())
+            {
+                string codigo = (string)database.Lector["Codigo"];
+                codigo = codigo.Substring(1);
+
+                codigosExistentes.Add(int.Parse(codigo));
+            }
+            
+            while (codigosExistentes.Contains(codigoMarca))
+            {
+                codigoMarca++;
+            }
+
+            return inicialMarca + codigoMarca;
         }
 
         private void btnAdminMarcas_Click(object sender, EventArgs e)
@@ -156,6 +218,14 @@ namespace TPWinForm_Equipo_7B
             }
             string selectedURL = listBoxImgURL.SelectedItem.ToString();
             listBoxImgURL.Items.Remove(selectedURL);
+            foreach (Imagen img in imagenes)
+            {
+                if (img.Url == selectedURL)
+                {
+                    imagenes.Remove(img);
+                    break;
+                }
+            }
         }
     }
 }

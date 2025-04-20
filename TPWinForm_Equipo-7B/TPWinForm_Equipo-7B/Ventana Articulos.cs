@@ -32,14 +32,20 @@ namespace TPWinForm_Equipo_7B
 
         private void CATALOGO_Load(object sender, EventArgs e)
         {
+            cargarArticulos();
+        }
+
+        private void cargarArticulos()
+        {
             articulosDatos datos = new articulosDatos();
             listaArticulos = datos.Listar();
+            dataGridView1.DataSource = null;
             dataGridView1.DataSource = listaArticulos;
         }
 
         private void dataGridView1_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-
+            
             frmArticleImages frmImages = new frmArticleImages(listaArticulos[e.RowIndex].Imagenes);
 
             frmImages.Text = "Imagenes de " + listaArticulos[e.RowIndex].Nombre;
@@ -52,6 +58,7 @@ namespace TPWinForm_Equipo_7B
             addArticle ventanaAddArticulo = new addArticle();
 
             ventanaAddArticulo.ShowDialog();
+            cargarArticulos();
         }
         ///
         private void btnBuscar_Click(object sender, EventArgs e)

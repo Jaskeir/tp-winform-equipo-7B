@@ -36,6 +36,8 @@ namespace TPWinForm_Equipo_7B
             catch (Exception ex)
             {
                 pictureBox1.Load("https://user-images.githubusercontent.com/47315479/81145216-7fbd8700-8f7e-11ea-9d49-bd5fb4a888f1.png");
+                lblInfoImgs.Text = "0 / 0";
+                return;
             }
             lblInfoImgs.Text = (indexImagen + 1).ToString() + " / " + listaImagenesArticulos.Count;
         }

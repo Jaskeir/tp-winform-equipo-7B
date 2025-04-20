@@ -39,5 +39,32 @@ namespace datos
             }
             return lista;
         }
+
+        public bool addImages(Articulo articulo)
+        {
+            Admin_Datos database = new Admin_Datos();
+            articulosDatos articulosDatos = new articulosDatos();
+            int idArticulo = articulosDatos.getId(articulo);
+            
+            try
+            {
+                foreach (Imagen img in articulo.Imagenes)
+                {
+                    database.setearConsulta("INSERT INTO Imagenes (IdArticulo, ImagenUrl) VALUES (@id, @url)");
+                    database.setearParametro("@id", idArticulo);
+                    database.setearParametro("@url", img.Url);
+                    database.ejecutarAccion();
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                database.cerrarConexion();
+            }
+        }
     }
 }
