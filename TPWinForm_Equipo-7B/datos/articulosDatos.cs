@@ -117,6 +117,29 @@ namespace dominio
             }
         }
 
+        public bool removeArticle(Articulo articulo)
+        {
+            Admin_Datos databaseArticulos = new Admin_Datos();
+            imagenesDatos imagenManager = new imagenesDatos();
+            try
+            {
+                databaseArticulos.setearConsulta("DELETE FROM Articulos WHERE Id = @id");
+                databaseArticulos.setearParametro("@id", articulo.Id);
+                databaseArticulos.ejecutarAccion();
+                imagenManager.removeAllImages(articulo);
+                MessageBox.Show("Artículo eliminado", "Eliminar artículo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                databaseArticulos.cerrarConexion();
+            }
+        }
+
         public int getId(Articulo articulo)
         {
             Admin_Datos database = new Admin_Datos();

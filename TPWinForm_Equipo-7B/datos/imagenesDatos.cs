@@ -57,7 +57,7 @@ namespace datos
             {
                 if (!articulo.Imagenes.Contains(img))
                 {
-                    removeImage(articulo.Id, img.Url);
+                    removeImage(articulo, img.Url);
                 }
             }
         }
@@ -95,14 +95,34 @@ namespace datos
             return true;
         }
 
-        public bool removeImage(int idArticulo, string url)
+        public bool removeImage(Articulo articulo, string url)
         {
             Admin_Datos database = new Admin_Datos();
             try
             {
                 database.setearConsulta("DELETE FROM Imagenes WHERE IdArticulo = @id AND ImagenUrl = @url");
-                database.setearParametro("@id", idArticulo);
+                database.setearParametro("@id", articulo.Id);
                 database.setearParametro("@url", url);
+                database.ejecutarAccion();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                database.cerrarConexion();
+            }
+        }
+
+        public bool removeAllImages(Articulo articulo)
+        {
+            Admin_Datos database = new Admin_Datos();
+            try
+            {
+                database.setearConsulta("DELETE FROM Imagenes WHERE IdArticulo = @id");
+                database.setearParametro("@id", articulo.Id);
                 database.ejecutarAccion();
                 return true;
             }

@@ -95,7 +95,6 @@
             this.Name = "NUEVA_MARCA";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "NUEVA MARCA";
-            this.Load += new System.EventHandler(this.NUEVA_MARCA_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

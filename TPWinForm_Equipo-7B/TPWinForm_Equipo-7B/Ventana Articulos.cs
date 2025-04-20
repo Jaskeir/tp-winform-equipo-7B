@@ -65,6 +65,15 @@ namespace TPWinForm_Equipo_7B
             Vbuscar.ShowDialog();
         }
 
-        
+        private void btnEliminarArticulo_Click(object sender, EventArgs e)
+        {
+            articulosDatos articulosDatos = new articulosDatos();
+            DialogResult respuesta = MessageBox.Show("¿Desea eliminar el artículo?", "Eliminar Artículo", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+            if (respuesta == DialogResult.Yes)
+                articulosDatos.removeArticle((Articulo)dataGridView1.CurrentRow.DataBoundItem);
+
+            cargarArticulos();
+        }
     }
 }
