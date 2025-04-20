@@ -33,9 +33,9 @@ namespace TPWinForm_Equipo_7B
             this.btnAgregarCate = new System.Windows.Forms.Button();
             this.btnModificarCate = new System.Windows.Forms.Button();
             this.btnEliminarCate = new System.Windows.Forms.Button();
-            this.lblBuscarCate = new System.Windows.Forms.Label();
+            this.BtnBuscarCate = new System.Windows.Forms.Button();
             this.txtBoxBuscarCate = new System.Windows.Forms.TextBox();
-            this.btnBuscarCate = new System.Windows.Forms.Button();
+            this.lblBuscarCate = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewCategorias)).BeginInit();
             this.SuspendLayout();
             // 
@@ -90,31 +90,31 @@ namespace TPWinForm_Equipo_7B
             this.btnEliminarCate.UseVisualStyleBackColor = false;
             this.btnEliminarCate.Click += new System.EventHandler(this.btnEliminarCate_Click);
             // 
+            // BtnBuscarCate
+            // 
+            this.BtnBuscarCate.Location = new System.Drawing.Point(209, 12);
+            this.BtnBuscarCate.Name = "BtnBuscarCate";
+            this.BtnBuscarCate.Size = new System.Drawing.Size(75, 23);
+            this.BtnBuscarCate.TabIndex = 4;
+            this.BtnBuscarCate.Text = "Buscar";
+            this.BtnBuscarCate.UseVisualStyleBackColor = true;
+            this.BtnBuscarCate.Click += new System.EventHandler(this.BtnBuscarCate_Click);
+            // 
+            // txtBoxBuscarCate
+            // 
+            this.txtBoxBuscarCate.Location = new System.Drawing.Point(86, 12);
+            this.txtBoxBuscarCate.Name = "txtBoxBuscarCate";
+            this.txtBoxBuscarCate.Size = new System.Drawing.Size(100, 20);
+            this.txtBoxBuscarCate.TabIndex = 5;
+            // 
             // lblBuscarCate
             // 
             this.lblBuscarCate.AutoSize = true;
             this.lblBuscarCate.Location = new System.Drawing.Point(12, 15);
             this.lblBuscarCate.Name = "lblBuscarCate";
             this.lblBuscarCate.Size = new System.Drawing.Size(63, 13);
-            this.lblBuscarCate.TabIndex = 4;
+            this.lblBuscarCate.TabIndex = 6;
             this.lblBuscarCate.Text = "Descripcion";
-            // 
-            // txtBoxBuscarCate
-            // 
-            this.txtBoxBuscarCate.Location = new System.Drawing.Point(81, 12);
-            this.txtBoxBuscarCate.Name = "txtBoxBuscarCate";
-            this.txtBoxBuscarCate.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxBuscarCate.TabIndex = 5;
-            // 
-            // btnBuscarCate
-            // 
-            this.btnBuscarCate.Location = new System.Drawing.Point(189, 10);
-            this.btnBuscarCate.Name = "btnBuscarCate";
-            this.btnBuscarCate.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscarCate.TabIndex = 6;
-            this.btnBuscarCate.Text = "Buscar";
-            this.btnBuscarCate.UseVisualStyleBackColor = true;
-            this.btnBuscarCate.Click += new System.EventHandler(this.btnBuscarCate_Click);
             // 
             // vCategorias
             // 
@@ -122,6 +122,9 @@ namespace TPWinForm_Equipo_7B
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(337, 298);
+            this.Controls.Add(this.lblBuscarCate);
+            this.Controls.Add(this.txtBoxBuscarCate);
+            this.Controls.Add(this.BtnBuscarCate);
             this.Controls.Add(this.btnEliminarCate);
             this.Controls.Add(this.btnModificarCate);
             this.Controls.Add(this.btnAgregarCate);
@@ -142,8 +145,8 @@ namespace TPWinForm_Equipo_7B
         private System.Windows.Forms.Button btnAgregarCate;
         private System.Windows.Forms.Button btnModificarCate;
         private System.Windows.Forms.Button btnEliminarCate;
-        private System.Windows.Forms.Label lblBuscarCate;
+        private System.Windows.Forms.Button BtnBuscarCate;
         private System.Windows.Forms.TextBox txtBoxBuscarCate;
-        private System.Windows.Forms.Button btnBuscarCate;
+        private System.Windows.Forms.Label lblBuscarCate;
     }
 }
