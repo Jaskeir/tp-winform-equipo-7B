@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(addArticle));
             this.lblNombreArticulo = new System.Windows.Forms.Label();
             this.txtBoxNombreArticulo = new System.Windows.Forms.TextBox();
             this.btnAceptar = new System.Windows.Forms.Button();
@@ -66,14 +67,14 @@
             this.txtBoxNombreArticulo.Location = new System.Drawing.Point(134, 5);
             this.txtBoxNombreArticulo.Name = "txtBoxNombreArticulo";
             this.txtBoxNombreArticulo.Size = new System.Drawing.Size(298, 20);
-            this.txtBoxNombreArticulo.TabIndex = 2;
+            this.txtBoxNombreArticulo.TabIndex = 0;
             // 
             // btnAceptar
             // 
             this.btnAceptar.Location = new System.Drawing.Point(295, 375);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(140, 30);
-            this.btnAceptar.TabIndex = 3;
+            this.btnAceptar.TabIndex = 12;
             this.btnAceptar.Text = "Añadir";
             this.btnAceptar.UseVisualStyleBackColor = true;
             this.btnAceptar.Click += new System.EventHandler(this.btnAceptar_Click);
@@ -94,7 +95,7 @@
             this.comboBoxMarca.Location = new System.Drawing.Point(134, 30);
             this.comboBoxMarca.Name = "comboBoxMarca";
             this.comboBoxMarca.Size = new System.Drawing.Size(218, 21);
-            this.comboBoxMarca.TabIndex = 5;
+            this.comboBoxMarca.TabIndex = 1;
             // 
             // lblCategoriaArticulo
             // 
@@ -112,14 +113,14 @@
             this.comboBoxCategoria.Location = new System.Drawing.Point(134, 55);
             this.comboBoxCategoria.Name = "comboBoxCategoria";
             this.comboBoxCategoria.Size = new System.Drawing.Size(218, 21);
-            this.comboBoxCategoria.TabIndex = 7;
+            this.comboBoxCategoria.TabIndex = 3;
             // 
             // btnAdminMarcas
             // 
             this.btnAdminMarcas.Location = new System.Drawing.Point(359, 30);
             this.btnAdminMarcas.Name = "btnAdminMarcas";
             this.btnAdminMarcas.Size = new System.Drawing.Size(75, 21);
-            this.btnAdminMarcas.TabIndex = 8;
+            this.btnAdminMarcas.TabIndex = 2;
             this.btnAdminMarcas.Text = "Admin";
             this.btnAdminMarcas.UseVisualStyleBackColor = true;
             this.btnAdminMarcas.Click += new System.EventHandler(this.btnAdminMarcas_Click);
@@ -129,7 +130,7 @@
             this.btnAdminCategorias.Location = new System.Drawing.Point(359, 55);
             this.btnAdminCategorias.Name = "btnAdminCategorias";
             this.btnAdminCategorias.Size = new System.Drawing.Size(75, 21);
-            this.btnAdminCategorias.TabIndex = 9;
+            this.btnAdminCategorias.TabIndex = 4;
             this.btnAdminCategorias.Text = "Admin";
             this.btnAdminCategorias.UseVisualStyleBackColor = true;
             this.btnAdminCategorias.Click += new System.EventHandler(this.btnAdminCategorias_Click);
@@ -139,7 +140,7 @@
             this.btnCancelar.Location = new System.Drawing.Point(10, 375);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(140, 30);
-            this.btnCancelar.TabIndex = 10;
+            this.btnCancelar.TabIndex = 11;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -158,7 +159,7 @@
             this.txtBoxPrecioArticulo.Location = new System.Drawing.Point(134, 80);
             this.txtBoxPrecioArticulo.Name = "txtBoxPrecioArticulo";
             this.txtBoxPrecioArticulo.Size = new System.Drawing.Size(298, 20);
-            this.txtBoxPrecioArticulo.TabIndex = 12;
+            this.txtBoxPrecioArticulo.TabIndex = 5;
             // 
             // pictureBoxArticulo
             // 
@@ -183,14 +184,14 @@
             this.txtBoxURL.Location = new System.Drawing.Point(134, 105);
             this.txtBoxURL.Name = "txtBoxURL";
             this.txtBoxURL.Size = new System.Drawing.Size(218, 20);
-            this.txtBoxURL.TabIndex = 15;
+            this.txtBoxURL.TabIndex = 6;
             // 
             // btnLoadImage
             // 
             this.btnLoadImage.Location = new System.Drawing.Point(357, 105);
             this.btnLoadImage.Name = "btnLoadImage";
             this.btnLoadImage.Size = new System.Drawing.Size(75, 21);
-            this.btnLoadImage.TabIndex = 16;
+            this.btnLoadImage.TabIndex = 7;
             this.btnLoadImage.Text = "Cargar";
             this.btnLoadImage.UseVisualStyleBackColor = true;
             this.btnLoadImage.Click += new System.EventHandler(this.btnLoadImage_Click);
@@ -200,7 +201,7 @@
             this.btnEliminarImg.Location = new System.Drawing.Point(10, 350);
             this.btnEliminarImg.Name = "btnEliminarImg";
             this.btnEliminarImg.Size = new System.Drawing.Size(210, 21);
-            this.btnEliminarImg.TabIndex = 18;
+            this.btnEliminarImg.TabIndex = 9;
             this.btnEliminarImg.Text = "Eliminar Imagen";
             this.btnEliminarImg.UseVisualStyleBackColor = true;
             this.btnEliminarImg.Click += new System.EventHandler(this.btnEliminarImg_Click);
@@ -210,7 +211,7 @@
             this.addImg.Location = new System.Drawing.Point(225, 350);
             this.addImg.Name = "addImg";
             this.addImg.Size = new System.Drawing.Size(210, 21);
-            this.addImg.TabIndex = 19;
+            this.addImg.TabIndex = 10;
             this.addImg.Text = "Añadir Imagen";
             this.addImg.UseVisualStyleBackColor = true;
             this.addImg.Click += new System.EventHandler(this.addImg_Click);
@@ -220,7 +221,7 @@
             this.txtBoxDescripcionArticulo.Location = new System.Drawing.Point(134, 130);
             this.txtBoxDescripcionArticulo.Name = "txtBoxDescripcionArticulo";
             this.txtBoxDescripcionArticulo.Size = new System.Drawing.Size(298, 20);
-            this.txtBoxDescripcionArticulo.TabIndex = 20;
+            this.txtBoxDescripcionArticulo.TabIndex = 8;
             // 
             // lblDescripcion
             // 
@@ -244,6 +245,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(444, 411);
             this.Controls.Add(this.listBoxImgURL);
             this.Controls.Add(this.lblDescripcion);
@@ -266,6 +268,11 @@
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.txtBoxNombreArticulo);
             this.Controls.Add(this.lblNombreArticulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(460, 450);
+            this.MinimumSize = new System.Drawing.Size(460, 450);
             this.Name = "addArticle";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Añadir Artículo";

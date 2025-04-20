@@ -29,6 +29,7 @@ namespace TPWinForm_Equipo_7B
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormNuevaCategoria));
             this.btnAceptarCate = new System.Windows.Forms.Button();
             this.btnCancelarCate = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -42,7 +43,7 @@ namespace TPWinForm_Equipo_7B
             this.btnAceptarCate.Location = new System.Drawing.Point(44, 161);
             this.btnAceptarCate.Name = "btnAceptarCate";
             this.btnAceptarCate.Size = new System.Drawing.Size(75, 23);
-            this.btnAceptarCate.TabIndex = 0;
+            this.btnAceptarCate.TabIndex = 1;
             this.btnAceptarCate.Text = "Aceptar";
             this.btnAceptarCate.UseVisualStyleBackColor = false;
             this.btnAceptarCate.Click += new System.EventHandler(this.btnAceptarCate_Click);
@@ -54,7 +55,7 @@ namespace TPWinForm_Equipo_7B
             this.btnCancelarCate.Location = new System.Drawing.Point(150, 161);
             this.btnCancelarCate.Name = "btnCancelarCate";
             this.btnCancelarCate.Size = new System.Drawing.Size(75, 23);
-            this.btnCancelarCate.TabIndex = 1;
+            this.btnCancelarCate.TabIndex = 2;
             this.btnCancelarCate.Text = "Cancelar";
             this.btnCancelarCate.UseVisualStyleBackColor = false;
             this.btnCancelarCate.Click += new System.EventHandler(this.btnCancelarCate_Click);
@@ -74,18 +75,24 @@ namespace TPWinForm_Equipo_7B
             this.txtBoxAgregarCate.Location = new System.Drawing.Point(125, 93);
             this.txtBoxAgregarCate.Name = "txtBoxAgregarCate";
             this.txtBoxAgregarCate.Size = new System.Drawing.Size(100, 20);
-            this.txtBoxAgregarCate.TabIndex = 3;
+            this.txtBoxAgregarCate.TabIndex = 0;
             // 
             // FormNuevaCategoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
-            this.ClientSize = new System.Drawing.Size(280, 227);
+            this.ClientSize = new System.Drawing.Size(284, 221);
             this.Controls.Add(this.txtBoxAgregarCate);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancelarCate);
             this.Controls.Add(this.btnAceptarCate);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MaximumSize = new System.Drawing.Size(300, 260);
+            this.MinimizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(300, 260);
             this.Name = "FormNuevaCategoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form7";

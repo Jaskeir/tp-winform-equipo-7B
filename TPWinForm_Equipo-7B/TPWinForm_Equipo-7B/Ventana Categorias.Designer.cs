@@ -29,6 +29,7 @@ namespace TPWinForm_Equipo_7B
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(vCategorias));
             this.dataGridViewCategorias = new System.Windows.Forms.DataGridView();
             this.btnAgregarCate = new System.Windows.Forms.Button();
             this.btnModificarCate = new System.Windows.Forms.Button();
@@ -119,6 +120,7 @@ namespace TPWinForm_Equipo_7B
             this.Controls.Add(this.btnModificarCate);
             this.Controls.Add(this.btnAgregarCate);
             this.Controls.Add(this.dataGridViewCategorias);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(353, 337);
             this.MinimumSize = new System.Drawing.Size(353, 337);

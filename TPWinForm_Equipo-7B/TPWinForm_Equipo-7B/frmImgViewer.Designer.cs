@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmArticleImages));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblInfoImgs = new System.Windows.Forms.Label();
             this.btnSiguiente = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             // 
             // lblInfoImgs
             // 
+            this.lblInfoImgs.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.lblInfoImgs.AutoSize = true;
             this.lblInfoImgs.Location = new System.Drawing.Point(200, 321);
             this.lblInfoImgs.Name = "lblInfoImgs";
@@ -58,6 +60,7 @@
             // 
             // btnSiguiente
             // 
+            this.btnSiguiente.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSiguiente.Location = new System.Drawing.Point(347, 316);
             this.btnSiguiente.Name = "btnSiguiente";
             this.btnSiguiente.Size = new System.Drawing.Size(75, 23);
@@ -68,6 +71,7 @@
             // 
             // btnAnterior
             // 
+            this.btnAnterior.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnAnterior.Location = new System.Drawing.Point(12, 316);
             this.btnAnterior.Name = "btnAnterior";
             this.btnAnterior.Size = new System.Drawing.Size(75, 23);
@@ -80,11 +84,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(434, 359);
             this.Controls.Add(this.btnAnterior);
             this.Controls.Add(this.btnSiguiente);
             this.Controls.Add(this.lblInfoImgs);
             this.Controls.Add(this.pictureBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MinimumSize = new System.Drawing.Size(450, 398);
             this.Name = "frmArticleImages";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Visor de Imagenes";

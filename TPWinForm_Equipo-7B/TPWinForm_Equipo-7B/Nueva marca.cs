@@ -62,7 +62,10 @@ namespace TPWinForm_Equipo_7B
             }
             
         }
-        
-    
+
+        private void NUEVA_MARCA_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
