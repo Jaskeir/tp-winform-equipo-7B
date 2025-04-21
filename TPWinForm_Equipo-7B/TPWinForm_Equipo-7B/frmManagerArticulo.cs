@@ -37,6 +37,7 @@ namespace TPWinForm_Equipo_7B
             Text = "Agregar Artículo";
             newArticle = true;
             btnAceptar.Text = "Agregar Artículo";
+            articulo = new Articulo();
         }
 
         private void loadCategoriasOnComboBox()
