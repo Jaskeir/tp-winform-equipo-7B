@@ -32,7 +32,6 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnEliminarArticulo = new System.Windows.Forms.Button();
             this.btnModificarArticulo = new System.Windows.Forms.Button();
-            this.btnVerDetallesArticulo = new System.Windows.Forms.Button();
             this.btnAddArticulo = new System.Windows.Forms.Button();
             this.btnBuscar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -81,18 +80,9 @@
             this.btnModificarArticulo.UseVisualStyleBackColor = true;
             this.btnModificarArticulo.Click += new System.EventHandler(this.btnModificarArticulo_Click);
             // 
-            // btnVerDetallesArticulo
-            // 
-            this.btnVerDetallesArticulo.Location = new System.Drawing.Point(139, 10);
-            this.btnVerDetallesArticulo.Name = "btnVerDetallesArticulo";
-            this.btnVerDetallesArticulo.Size = new System.Drawing.Size(120, 30);
-            this.btnVerDetallesArticulo.TabIndex = 1;
-            this.btnVerDetallesArticulo.Text = "Ver Detalles";
-            this.btnVerDetallesArticulo.UseVisualStyleBackColor = true;
-            // 
             // btnAddArticulo
             // 
-            this.btnAddArticulo.Location = new System.Drawing.Point(266, 10);
+            this.btnAddArticulo.Location = new System.Drawing.Point(148, 10);
             this.btnAddArticulo.Name = "btnAddArticulo";
             this.btnAddArticulo.Size = new System.Drawing.Size(120, 30);
             this.btnAddArticulo.TabIndex = 2;
@@ -118,7 +108,6 @@
             this.ClientSize = new System.Drawing.Size(814, 521);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.btnAddArticulo);
-            this.Controls.Add(this.btnVerDetallesArticulo);
             this.Controls.Add(this.btnModificarArticulo);
             this.Controls.Add(this.btnEliminarArticulo);
             this.Controls.Add(this.dataGridView1);
@@ -138,7 +127,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnEliminarArticulo;
         private System.Windows.Forms.Button btnModificarArticulo;
-        private System.Windows.Forms.Button btnVerDetallesArticulo;
         private System.Windows.Forms.Button btnAddArticulo;
         private System.Windows.Forms.Button btnBuscar;
     }
